@@ -1,0 +1,253 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.listings-main-image {
+  background-image: url("/img/listing-main-bg.png") !important;
+  height: 965px !important;
+}
+.listings-main-image .listings-text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+.listings-main-image .listings-text-box h1 {
+  font-family: "Roboto";
+  font-weight: 500;
+  line-height: 78px;
+  font-size: 60px;
+  color: #ffffff;
+  letter-spacing: normal;
+  width: 600px;
+}
+.listings-main-image .listings-text-box p {
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 21px;
+  font-size: 15px;
+  color: #ffffff;
+  letter-spacing: normal;
+}
+.listings-main-image .listings-text-box .yellow-paragraph {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+.listings-main-image .listings-text-box .yellow-paragraph p {
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 21px;
+  font-size: 15px;
+  color: #E7C873;
+  letter-spacing: normal;
+}
+
+.cities-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.cities-section .cities-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.cities-section .cities-title h2 {
+  font-family: "Roboto";
+  font-weight: 500;
+  line-height: 52px;
+  font-size: 40px;
+  color: #1A1A1A;
+  letter-spacing: normal;
+}
+.cities-section .cities-title p {
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 32px;
+  font-size: 16px;
+  color: #1A1A1A;
+  letter-spacing: normal;
+  text-align: center;
+}
+.cities-section .cities-widgets {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.cities-section .cities-widgets .cities-widget {
+  background-image: url("/img/new-york.png");
+  width: 256px;
+  height: 318px;
+  background-size: cover;
+  position: relative;
+  padding: 40px;
+}
+.cities-section .cities-widgets .cities-widget p:first-child {
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 22px;
+  font-size: 20px;
+  color: #ffffff;
+  letter-spacing: normal;
+}
+.cities-section .cities-widgets .cities-widget p:last-child {
+  font-family: "Roboto";
+  font-weight: 300;
+  line-height: 22px;
+  font-size: 15px;
+  color: #ffffff;
+  letter-spacing: normal;
+}/*# sourceMappingURL=listings.css.map */
