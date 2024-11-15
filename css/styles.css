@@ -635,6 +635,20 @@ body main .column-widgets {
   align-items: center;
   gap: 40px;
 }
+body main .column-widgets .categories-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 1640px;
+}
+body main .column-widgets .categories-header .categories-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5px;
+}
 body main .column-widgets h2 {
   font-family: "Roboto";
   font-weight: 500;
@@ -643,7 +657,14 @@ body main .column-widgets h2 {
   color: #1A1A1A;
   letter-spacing: normal;
   text-align: center;
-  margin-bottom: 50px;
+}
+body main .column-widgets p {
+  font-family: "Roboto";
+  font-weight: 500;
+  line-height: 52px;
+  font-size: 16px;
+  color: #1A1A1A;
+  letter-spacing: normal;
 }
 body main .row-widgets {
   display: flex;

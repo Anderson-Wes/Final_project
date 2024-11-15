@@ -194,7 +194,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 50px;
 }
 .cities-section .cities-title {
   display: flex;
@@ -223,9 +223,10 @@ a {
 .cities-section .cities-widgets {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
+  justify-content: space-between;
+  align-items: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 .cities-section .cities-widgets .cities-widget {
   background-image: url("/img/new-york.png");
@@ -248,6 +249,177 @@ a {
   font-weight: 300;
   line-height: 22px;
   font-size: 15px;
+  color: #ffffff;
+  letter-spacing: normal;
+}
+
+.slider-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  gap: 20px;
+}
+.slider-navigation .arrow-icon {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #E9E9E9;
+  width: 60px;
+  height: 40px;
+  border-radius: 40px;
+}
+
+.properties-section {
+  background-color: #2D3A4F;
+  width: 100%;
+  padding: 170px 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.properties-section .properties-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.properties-section .properties-content .properties-title h2 {
+  font-family: "Roboto";
+  font-weight: 500;
+  line-height: 52px;
+  font-size: 40px;
+  color: #ffffff;
+  letter-spacing: normal;
+  text-align: center;
+}
+.properties-section .properties-content .properties-title p {
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 52px;
+  font-size: 16px;
+  color: #ffffff;
+  letter-spacing: normal;
+  text-align: center;
+}
+.properties-section .properties-content .properties-widgets {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+.properties-section .properties-content .properties-widgets .properties-left-widget {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px;
+  width: 680px;
+  height: 700px;
+  background-color: #E9E9E9;
+  background-image: url();
+}
+.properties-section .properties-content .properties-widgets .properties-left-widget .sale-featured {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.properties-section .properties-content .properties-widgets .properties-left-widget .sale-featured .for-sale {
+  background-color: #1F4B43;
+  border-radius: 33px;
+  padding: 2px 15px;
+}
+.properties-section .properties-content .properties-widgets .properties-left-widget .sale-featured .for-sale p {
+  font-family: "Roboto";
+  font-weight: 500;
+  line-height: 33px;
+  font-size: 15px;
+  color: #ffffff;
+  letter-spacing: normal;
+}
+.properties-section .properties-content .properties-widgets .properties-left-widget .sale-featured .featured {
+  background-color: #E7C873;
+  border-radius: 33px;
+  padding: 2px 15px;
+}
+.properties-section .properties-content .properties-widgets .properties-left-widget .sale-featured .featured p {
+  font-family: "Roboto";
+  font-weight: 500;
+  line-height: 33px;
+  font-size: 15px;
+  color: #1A1A1A;
+  letter-spacing: normal;
+}
+.properties-section .properties-content .properties-widgets .properties-left-widget .left-widget-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+  gap: 20px;
+}
+.properties-section .properties-content .properties-widgets .properties-left-widget .left-widget-description .left-widget-title {
+  font-family: "Roboto";
+  font-weight: 500;
+  line-height: 32px;
+  font-size: 40px;
+  color: #ffffff;
+  letter-spacing: normal;
+}
+.properties-section .properties-content .properties-widgets .properties-left-widget .left-widget-description .left-widget-location {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Roboto";
+  font-weight: 500;
+  line-height: 30px;
+  font-size: 15px;
+  color: #ffffff;
+  letter-spacing: normal;
+  gap: 10px;
+}
+.properties-section .properties-content .properties-widgets .properties-left-widget .left-widget-description .left-widget-description {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 60px;
+}
+.properties-section .properties-content .properties-widgets .properties-left-widget .left-widget-description .left-widget-description p {
+  font-family: "Roboto";
+  font-weight: 600;
+  line-height: 30px;
+  font-size: 20px;
+  color: #ffffff;
+  letter-spacing: normal;
+}
+.properties-section .properties-content .properties-widgets .properties-left-widget .left-widget-description .left-widget-description .widget-properties-description {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+}
+.properties-section .properties-content .properties-widgets .properties-left-widget .left-widget-description .left-widget-description .widget-properties-description .rooms-description {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.properties-section .properties-content .properties-widgets .properties-left-widget .left-widget-description .left-widget-description .widget-properties-description .rooms-description p {
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 18px;
+  font-size: 16px;
   color: #ffffff;
   letter-spacing: normal;
 }/*# sourceMappingURL=listings.css.map */
