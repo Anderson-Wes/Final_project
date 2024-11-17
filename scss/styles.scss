@@ -1,656 +1,503 @@
-@import 'reset';
-@import 'variables';
-@import 'placeholder';
-@import 'mixins';
-@import 'popup';
-@import 'footer';
+@import "reset";
+@import "variables";
+@import "mixins";
+@import "popup";
+@import "footer";
+@import "button";
+@import "widget";
 
 body {
-  background-color: $color-background;
+    background-color: $color-background;
 
-  .main-image {
-    background-image: url("/img/main-img.png");
-    padding: 42px 40px;
-    width: 100%;
-    height: 860px;
-    background-size: cover;
-    position: relative;
-
-
-    .header {
-      @include flex-center(row, space-between, center);
-      padding: 20px 40px;
-      background-color: $color-white;
-      border-radius: 80px;
-
-      .navbar {
-        @include flex-center(row, center, center);
-
-        .dropdown a {
-          @include font-style (400, 30px, $font-size-medium, $color-primary);
-        }
-
-        .dropdown:hover .dropdown-content {
-          @include flex-center(column, center, center);
-          padding: 10px;
-        }
-
-        .dropbtn {
-          @include font-style (700, 60px, $font-size-medium, $color-white);
-          background-color: $color-white;
-          padding: 0 25px;
-          border: none;
-        }
-
-        .dropdown-content {
-          display: none;
-          position: absolute;
-          background-color: $color-white;
-          min-width: 120px;
-          border-radius: 18px;
-          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-          z-index: 1;
-
-          a:hover {
-            background-color: $color-background;
-            text-align: center;
-            width: 100%;
-            height: 100%;
-            border-radius: 8px;
-          }
-
-        }
-      }
-
-      .nav-right-block {
-        @include flex-center(row, center, center);
-        gap: 20px;
-
-        .phone {
-          @include flex-center(row, center, center);
-          gap: 12px;
-
-          a {
-            @include font-style (500, 20px, $font-size-medium, $color-primary, 1px);
-          }
-        }
-
-        .add-button {
-          @include button-style($color-white, $color-primary, 80px, $border-solid, $font-size-medium, $color-primary, $color-white);
-          padding: 2px 30px;
-          text-align: center;
-          display: flex;
-        }
-      }
-    }
-
-    .text-box {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-
-      .heading-primary {
-        color: $color-secondary;
-        text-transform: uppercase;
-        margin-bottom: 60px;
-
-        .heading-primary-main {
-          @include font-style (700, 60px, $font-size-xxlarge, $color-secondary, 11px);
-          display: block;
-        }
-
-        .heading-primary-sub {
-          @include font-style (400, 30px, $font-size-medium, $color-secondary, 9px);
-          display: block;
-        }
-      }
-
-      .search {
+    .main-image {
+        background-image: url("/img/main-img.png");
+        padding: 42px 40px;
         width: 100%;
+        height: 860px;
+        background-size: cover;
         position: relative;
-        display: flex;
 
-        .searchTerm {
-          width: 100%;
-          border: none;
-          padding: 26px 30px;
-          border-radius: 80px;
-        }
-
-        .searchButton {
-          position: absolute;
-          width: 60px;
-          height: 60px;
-          border: none;
-          background: $color-accent;
-          border-radius: 80px;
-          cursor: pointer;
-          top: 50%;
-          right: 5px;
-          transform: translate(0, -50%);
-        }
-      }
-    }
-  }
-
-  main {
-    @include flex-center(column);
-
-    section {
-      padding: 100px 0;
-    }
-
-    .column-widgets {
-      @include flex-center(column, center, center);
-      gap: 40px;
-
-
-      .categories-header {
-        @include flex-center(row, space-between, center);
-        width: 1640px;
-
-        .categories-title {
-          @include flex-center(column, center, flex-start);
-          gap: 5px;
-        }
-      }
-      h2 {
-        @include font-style (500, 52px, $font-size-xlarge, $color-primary);
-        text-align: center;
-      }
-
-      p {
-        @include font-style (500, 52px, $font-size-medium, $color-primary);
-      }
-    }
-
-    .row-widgets {
-      @include flex-center(row, center, center);
-      gap: 40px;
-
-      .widget {
-        position: relative;
-        background-color: $color-white;
-        width: 520px;
-        height: 520px;
-        border-radius: 12px;
-
-        .image-background {
-          background-image: url(/img/widget1-1.png);
-          background-size: cover;
-          width: 520px;
-          height: 420px;
-          border-radius: 12px 12px 0 0;
-        }
-
-        .widget-description {
-          background-color: $color-white;
-          border-radius: 12px;
-          @include flex-center(column, space-between, space-between);
-          gap: 10px;
-          position: absolute;
-          width: 470px;
-          height: 140px;
-          padding: 25px;
-          top: 80%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-
-          .widget-title {
-            @include font-style (400, 22px, $font-size-large, $color-primary);
-            margin-bottom: 20px;
-          }
-
-          .location,
-          .bedrooms,
-          .bathrooms,
-          .square {
-            @include flex-center(row, flex-start, center);
-            gap: 10px;
-          }
-
-          .location p {
-            @include font-style (400, 30px, $font-size-medium, $color-primary);
-          }
-
-          .description-row {
-            @include flex-center(row, space-between);
-
-            .specification {
-              @include flex-center(row, flex-end, space-between);
-              gap: 30px;
-
-              p {
-                @include font-style (400, 18px, $font-size-medium, $color-primary);
-              }
-            }
-
-            .price p {
-              @include font-style (600, 30px, $font-size-large, $color-price);
-            }
-          }
-        }
-      }
-    }
-
-    .stats-section {
-      @include flex-center(column, center, center);
-      background-color: $color-secondary;
-      width: 100%;
-      height: 1170px;
-      padding: 175px 260px;
-      gap: 70px;
-
-      .stats-content {
-        @include flex-center(row, center, center);
-        gap: 165px;
-
-        .stats-background-image {
-          position: relative;
-          background-image: url(/img/stats.png);
-          height: 638px;
-          width: 638px;
-          background-size: cover;
-          padding: 25px;
-
-          .clients-stats {
+        .header {
+            @include flex-center(row, space-between, center);
+            padding: 20px 40px;
             background-color: $color-white;
-            width: 254px;
-            height: 100px;
-            border-radius: 12px;
-            @include flex-center(row, space-evenly, center);
+            border-radius: 80px;
 
-            .community-icon {
-              background-color: #FAF4E3;
-              width: 60px;
-              height: 60px;
-              border-radius: 50px;
-              @include flex-center(row, center, center);
+            .navbar {
+                @include flex-center(row, center, center);
 
-              .total-clients {
-                @include flex-center(column, center, center);
-              }
+                .dropdown a {
+                    @include font-style(
+                        400,
+                        30px,
+                        $font-size-medium,
+                        $color-primary
+                    );
+                }
+
+                .dropdown:hover .dropdown-content {
+                    @include flex-center(column, center, center);
+                    padding: 10px;
+                }
+
+                .dropbtn {
+                    @include font-style(
+                        700,
+                        60px,
+                        $font-size-medium,
+                        $color-white
+                    );
+                    background-color: $color-white;
+                    padding: 0 25px;
+                    border: none;
+                }
+
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    background-color: $color-white;
+                    min-width: 120px;
+                    border-radius: 18px;
+                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                    z-index: 1;
+
+                    a:hover {
+                        background-color: $color-background;
+                        text-align: center;
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 8px;
+                    }
+                }
             }
-          }
+
+            .nav-right-block {
+                @include flex-center(row, center, center);
+                gap: 20px;
+
+                .phone {
+                    @include flex-center(row, center, center);
+                    gap: 12px;
+
+                    a {
+                        @include font-style(
+                            500,
+                            20px,
+                            $font-size-medium,
+                            $color-primary,
+                            1px
+                        );
+                    }
+                }
+
+                .add-button {
+                    @include button-style(
+                        $color-white,
+                        $color-primary,
+                        80px,
+                        $border-solid,
+                        $font-size-medium,
+                        $color-primary,
+                        $color-white
+                    );
+                    padding: 2px 30px;
+                    text-align: center;
+                    display: flex;
+                }
+            }
         }
 
-        .column-description {
-          @include flex-center(column, center, flex-start);
-          gap: 20px;
+        .text-box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
 
-          p {
-            @include font-style (300, 30px, $font-size-medium, $color-white);
-            width: 556px;
-          }
+            .heading-primary {
+                color: $color-secondary;
+                text-transform: uppercase;
+                margin-bottom: 60px;
 
-          h2 {
-            @include font-style (500, 52px, $font-size-xlarge, $color-white);
-            text-align: start;
-          }
+                .heading-primary-main {
+                    @include font-style(
+                        700,
+                        60px,
+                        $font-size-xxlarge,
+                        $color-secondary,
+                        11px
+                    );
+                    display: block;
+                }
 
-          .learn-more-button {
-            @include flex-center(row, center, center);
-            @include button-style($color-accent, $color-primary, 18px, none, $font-size-small);
-            gap: 20px;
-            width: 210px;
-            height: 64px;
-          }
+                .heading-primary-sub {
+                    @include font-style(
+                        400,
+                        30px,
+                        $font-size-medium,
+                        $color-secondary,
+                        9px
+                    );
+                    display: block;
+                }
+            }
+
+            .search {
+                width: 100%;
+                position: relative;
+                display: flex;
+
+                .searchTerm {
+                    width: 100%;
+                    border: none;
+                    padding: 26px 30px;
+                    border-radius: 80px;
+                }
+
+                .searchButton {
+                    position: absolute;
+                    width: 60px;
+                    height: 60px;
+                    border: none;
+                    background: $color-accent;
+                    border-radius: 80px;
+                    cursor: pointer;
+                    top: 50%;
+                    right: 5px;
+                    transform: translate(0, -50%);
+                }
+            }
         }
-
-      }
-
-      .stats-row {
-        @include flex-center(row, center, center);
-        gap: 180px;
-
-        .stats-count {
-          @include flex-center(column, center, center);
-
-          p:first-child {
-            @include font-style (500, 72px, $font-size-xlarge, $color-accent);
-          }
-
-          p:last-child {
-            @include font-style (300, 30px, $font-size-medium, $color-white);
-          }
-        }
-      }
     }
 
-    .steps-section {
-      @include flex-center(row, center, center);
-      gap: 200px;
+    main {
+        @include flex-center(column);
 
-      .steps-left-block {
-        @include flex-center(column, space-between, space-between);
-        position: relative;
-        background-color: $color-white;
-        height: 840px;
-        width: 840px;
-        border-radius: 18px;
-
-        .top-image {
-          background-image: url(/img/top-image.png);
-          width: 573px;
-          height: 280px;
+        section {
+            padding: 100px 0;
         }
 
-        .lower-image {
-          @include flex-center(row, space-between, flex-start);
-        }
-
-        .lower-image div:first-child {
-          background-image: url(/img/mid-image.png);
-          width: 334px;
-          height: 359px;
-          border-radius: 18px;
-        }
-
-        .lower-image div:last-child {
-          background-image: url(/img/lower-image.png);
-          width: 488px;
-          height: 540px;
-        }
-
-        .steps-clients-stats {
-          position: absolute;
-          top: 30%;
-          right: 45%;
-          background-color: $color-white;
-          width: 254px;
-          height: 100px;
-          border-radius: 12px;
-          @include flex-center(row, space-evenly, center);
-
-          .community-icon {
-            background-color: #FAF4E3;
-            width: 60px;
-            height: 60px;
-            border-radius: 50px;
-            @include flex-center(row, center, center);
-
-            .total-clients {
-              @include flex-center(column, center, center);
-            }
-          }
-        }
-      }
-
-      .steps-right-block {
-        @include flex-center(column, center, flex-start);
-
-        h2 {
-          @include font-style (500, 52px, $font-size-xlarge, $color-primary);
-          margin-bottom: 35px;
-        }
-
-        .finding-steps {
-          @include flex-center(column);
-          gap: 30px;
-        }
-
-        .finding-steps-description {
-          @include flex-center(row, center, flex-start);
-          gap: 22px;
-        }
-
-        .finding-steps-description p:first-child {
-          @include font-style (500, 25px, $font-size-large, $color-primary);
-        }
-
-        .finding-steps-description p:last-child {
-          @include font-style (400, 28px, $font-size-medium, $color-primary);
-          width: 310px;
-        }
-      }
-    }
-
-    .news-section {
-
-
-      .news-content {
-        @include flex-center(column, center, center);
-        gap: 40px;
-  
-        .news-title h2 {
-          @include font-style (500, 52px, $font-size-xlarge, $color-primary);
-          margin-bottom: 5px;
-        }
-  
-        .news-title p {
-          @include font-style (400, 32px, $font-size-medium, $color-grey);
-        }
-  
-        .news-widgets-row {
-          @include flex-center(row, center);
-          gap: 30px;
-  
-          .news-widget {
+        .column-widgets {
             @include flex-center(column, center, center);
-            background-color: $color-light-grey;
-            width: 328px;
-            border-radius: 18px;
-            padding-bottom: 30px;
-  
-            .news-widget-image {
-              background-image: url(/img/news-widget1-1.png);
-              width: 100%;
-              height: 218px;
-              border-radius: 18px;
-              background-size: cover;
-              margin-bottom: 20px;
+            gap: 40px;
+
+            .categories-header {
+                @include flex-center(row, space-between, center);
+                width: 1640px;
+
+                .categories-title {
+                    @include flex-center(column, center, flex-start);
+                    gap: 5px;
+                }
             }
-  
-            .news-widget-date {
-              @include flex-center(row, center, center);
-              @include font-style (400, 28px, $font-size-small, $color-grey);
-              margin-bottom: 10px;
-              gap: 8px;
-  
-              .news-widget-dot {
-                width: 4px;
-                height: 4px;
-                border-radius: 4px;
-                background-color: $color-primary;
-              }
+            h2 {
+                @include font-style(
+                    500,
+                    52px,
+                    $font-size-xlarge,
+                    $color-primary
+                );
+                text-align: center;
             }
-  
-            .news-widget-description p {
-              @include font-style (400, 26px, $font-size-medium, $color-primary);
-              text-align: center;
-              width: 240px;
-              margin-bottom: 15px;
+
+            p {
+                @include font-style(
+                    500,
+                    52px,
+                    $font-size-medium,
+                    $color-primary
+                );
             }
-  
-            .widget-btn {
-              @include button-style($color-accent, $color-primary, 18px, none, $font-size-small);
-              @include flex-center(row, center, center);
-              gap: 20px;
-              padding: 2px 50px;
-            }
-  
-          }
         }
-      }
+
+        .row-widgets {
+            @include flex-center(row, center, center);
+            gap: 40px;
+        }
+
+        .stats-section {
+            @include flex-center(column, center, center);
+            background-color: $color-secondary;
+            width: 100%;
+            height: 1170px;
+            padding: 175px 260px;
+            gap: 70px;
+
+            .stats-content {
+                @include flex-center(row, center, center);
+                gap: 165px;
+
+                .stats-background-image {
+                    position: relative;
+                    background-image: url(/img/stats.png);
+                    height: 638px;
+                    width: 638px;
+                    background-size: cover;
+                    padding: 25px;
+
+                    .clients-stats {
+                        background-color: $color-white;
+                        width: 254px;
+                        height: 100px;
+                        border-radius: 12px;
+                        @include flex-center(row, space-evenly, center);
+
+                        .community-icon {
+                            background-color: #faf4e3;
+                            width: 60px;
+                            height: 60px;
+                            border-radius: 50px;
+                            @include flex-center(row, center, center);
+
+                            .total-clients {
+                                @include flex-center(column, center, center);
+                            }
+                        }
+                    }
+                }
+
+                .column-description {
+                    @include flex-center(column, center, flex-start);
+                    gap: 20px;
+
+                    p {
+                        @include font-style(
+                            300,
+                            30px,
+                            $font-size-medium,
+                            $color-white
+                        );
+                        width: 556px;
+                    }
+
+                    h2 {
+                        @include font-style(
+                            500,
+                            52px,
+                            $font-size-xlarge,
+                            $color-white
+                        );
+                        text-align: start;
+                    }
+                }
+            }
+
+            .stats-row {
+                @include flex-center(row, center, center);
+                gap: 180px;
+
+                .stats-count {
+                    @include flex-center(column, center, center);
+
+                    p:first-child {
+                        @include font-style(
+                            500,
+                            72px,
+                            $font-size-xlarge,
+                            $color-accent
+                        );
+                    }
+
+                    p:last-child {
+                        @include font-style(
+                            300,
+                            30px,
+                            $font-size-medium,
+                            $color-white
+                        );
+                    }
+                }
+            }
+        }
+
+        .steps-section {
+            @include flex-center(row, center, center);
+            gap: 200px;
+
+            .steps-left-block {
+                @include flex-center(column, space-between, space-between);
+                position: relative;
+                background-color: $color-white;
+                height: 840px;
+                width: 840px;
+                border-radius: 18px;
+
+                .top-image {
+                    background-image: url(/img/top-image.png);
+                    width: 573px;
+                    height: 280px;
+                }
+
+                .lower-image {
+                    @include flex-center(row, space-between, flex-start);
+                }
+
+                .lower-image div:first-child {
+                    background-image: url(/img/mid-image.png);
+                    width: 334px;
+                    height: 359px;
+                    border-radius: 18px;
+                }
+
+                .lower-image div:last-child {
+                    background-image: url(/img/lower-image.png);
+                    width: 488px;
+                    height: 540px;
+                }
+
+                .steps-clients-stats {
+                    position: absolute;
+                    top: 30%;
+                    right: 45%;
+                    background-color: $color-white;
+                    width: 254px;
+                    height: 100px;
+                    border-radius: 12px;
+                    @include flex-center(row, space-evenly, center);
+
+                    .community-icon {
+                        background-color: #faf4e3;
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50px;
+                        @include flex-center(row, center, center);
+
+                        .total-clients {
+                            @include flex-center(column, center, center);
+                        }
+                    }
+                }
+            }
+
+            .steps-right-block {
+                @include flex-center(column, center, flex-start);
+
+                h2 {
+                    @include font-style(
+                        500,
+                        52px,
+                        $font-size-xlarge,
+                        $color-primary
+                    );
+                    margin-bottom: 35px;
+                }
+
+                .finding-steps {
+                    @include flex-center(column);
+                    gap: 30px;
+                }
+
+                .finding-steps-description {
+                    @include flex-center(row, center, flex-start);
+                    gap: 22px;
+                }
+
+                .finding-steps-description p:first-child {
+                    @include font-style(
+                        500,
+                        25px,
+                        $font-size-large,
+                        $color-primary
+                    );
+                }
+
+                .finding-steps-description p:last-child {
+                    @include font-style(
+                        400,
+                        28px,
+                        $font-size-medium,
+                        $color-primary
+                    );
+                    width: 310px;
+                }
+            }
+        }
+
+        .news-section {
+            .news-content {
+                @include flex-center(column, center, center);
+                gap: 40px;
+
+                .news-title h2 {
+                    @include font-style(
+                        500,
+                        52px,
+                        $font-size-xlarge,
+                        $color-primary
+                    );
+                    margin-bottom: 5px;
+                }
+
+                .news-title p {
+                    @include font-style(
+                        400,
+                        32px,
+                        $font-size-medium,
+                        $color-grey
+                    );
+                }
+
+                .news-widgets-row {
+                    @include flex-center(row, center);
+                    gap: 30px;
+                }
+            }
+        }
+
+        .markets-section {
+            max-width: 1420px;
+
+            .markets-title h2 {
+                @include font-style(
+                    500,
+                    52px,
+                    $font-size-xlarge,
+                    $color-primary
+                );
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            .markets-title p {
+                @include font-style(400, 32px, $font-size-medium, $color-grey);
+                text-align: center;
+                margin-bottom: 40px;
+            }
+
+            .markets-address {
+                @include flex-center(row, center);
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+        }
     }
 
-    
+    .total-clients p:first-child {
+        @include font-style(400, 30px, $font-size-medium, $color-primary, 1px);
+    }
 
-    .markets-section {
-      max-width: 1420px;
+    .total-clients p:last-child {
+        @include font-style(500, 30px, $font-size-large, $color-primary, 4px);
+    }
 
-      .markets-title h2 {
-        @include font-style (500, 52px, $font-size-xlarge, $color-primary);
-        margin-bottom: 20px;
-        text-align: center;
-      }
-
-      .markets-title p {
-        @include font-style (400, 32px, $font-size-medium, $color-grey);
-        text-align: center;
-        margin-bottom: 40px;
-      }
-
-      .markets-address {
-        @include flex-center(row, center);
-        flex-wrap: wrap;
+    .widget-btn {
+        @include button-style(
+            $color-accent,
+            $color-primary,
+            18px,
+            none,
+            $font-size-small
+        );
+        @include flex-center(row, center, center);
         gap: 20px;
+        padding: 2px 50px;
+    }
 
-        .address-button {
-          @include button-style($color-white, $color-primary, 80px, $border-solid, $font-size-medium, $color-primary, $color-white);
-          padding: 2px 30px;
-          text-align: center;
-          display: inline-block;
+    .iframe-footer-conteiner {
+        @include flex-center(column, center, stretch);
+
+        .iframe-footer {
+            width: 100%;
+            height: 709px;
         }
-      }
     }
-  }
-
-  // .footer-background {
-  //   background-color: $color-secondary;
-  //   padding: 56px 120px;
-
-  //   .footer-main {
-  //     @include flex-center(column, center, space-between);
-  //     gap: 50px;
-  //     max-width: 1700px;
-  //     margin: 0 auto;
-
-  //     .footer-top-block {
-  //       @include flex-center(row, space-between, center);
-
-  //       .footer-social-network {
-  //         @include flex-center();
-  //         gap: 34px;
-  //         color: $color-white;
-
-  //         .social-network-icon {
-  //           @include flex-center();
-  //           gap: 25px;
-  //         }
-  //       }
-  //     }
-
-  //     .horizontal-line {
-  //       background-color: $color-line;
-  //       width: 100%;
-  //       height: 1px;
-  //     }
-
-  //     .footer-mid-row {
-  //       @include flex-center(row, space-between, flex-start);
-  //       gap: 50px;
-
-  //       .footer-navigation {
-  //         width: 170px;
-
-  //         ul,
-  //         a {
-  //           @include flex-center(column, flex-start, flex-start);
-  //           @include font-style (300, 28px, $font-size-small, $color-white);
-  //           gap: 10px;
-  //         }
-  //       }
-
-  //       .footer-nav-title {
-  //         @include font-style (500, 22px, $font-size-large, $color-footer-nav);
-  //         margin-bottom: 30px;
-  //       }
-
-  //       .app {
-  //         @include flex-center(column);
-  //         gap: 20px;
-
-  //         .get-app {
-  //           background-color: $color-line;
-  //           width: 220px;
-  //           border-radius: 12px;
-
-  //           .get-app-content {
-  //             @include flex-center(row, space-evenly, center);
-  //             padding: 20px 25px;
-  //             gap: 15px;
-
-  //             .vertical-line {
-  //               background-color: $color-white;
-  //               width: 1px;
-  //               height: 38px;
-  //             }
-
-  //             p:first-child {
-  //               @include font-style (400, 16px, 12px, $color-white);
-  //               margin-bottom: 4px;
-  //             }
-
-  //             p:last-child {
-  //               @include font-style (500, 20px, $font-size-small, $color-white);
-  //             }
-  //           }
-  //         }
-  //       }
-
-  //       .subscribe-content {
-  //         @include flex-center(column, center, space-between);
-  //         gap: 15px;
-
-  //         p {
-  //           @include font-style (400, 28px, $font-size-medium, $color-white);
-  //         }
-
-  //         .email {
-  //           @include flex-center(row, space-between);
-
-  //           .emailInput {
-  //             background-color: $color-secondary;
-  //             border: none;
-  //             outline: none;
-  //             color: $color-white;
-
-  //             &::placeholder {
-  //               color: $color-white;
-  //             }
-  //           }
-
-  //           .mail-button {
-  //             @include flex-center(row, space-between, center);
-  //             @include button-style($color-line, $color-white, 44px, none, $font-size-medium, $color-primary, $color-white);
-  //             padding: $spacing-xs $spacing-l;
-  //             width: 118px;
-  //             height: 42px;
-  //           }
-  //         }
-  //       }
-  //     }
-
-  //     .footer-bottom-row p {
-  //       @include font-style (400, 28px, $font-size-medium, $color-white);
-  //       text-align: center;
-  //     }
-  //   }
-  // }
-
-  .total-clients p:first-child {
-    @include font-style (400, 30px, $font-size-medium, $color-primary, 1px);
-  }
-
-  .total-clients p:last-child {
-    @include font-style (500, 30px, $font-size-large, $color-primary, 4px);
-  }
-
-  .widget-btn {
-    @include button-style($color-accent, $color-primary, 18px, none, $font-size-small);
-    @include flex-center(row, center, center);
-    gap: 20px;
-    padding: 2px 50px;
-  }
-
-  .iframe-footer-conteiner {
-    @include flex-center(column, center, stretch);
-
-    .iframe-footer {
-      width: 100%;
-      height: 709px;
-    }
-  }
 }

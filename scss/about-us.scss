@@ -1,3 +1,187 @@
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+
 .why-us-section {
     @include flex-center(column, center, center);
+    gap: 40px;
+
+    .why-us-title {
+        @include flex-center(column, center, center);
+        gap: 5px;
+
+        h2 {
+            @include font-style (500, 52px, $font-size-xlarge, $color-primary);
+        }
+
+        p {
+            @include font-style (400, 32px, $font-size-medium, $color-primary);
+        }
+    }
+
+    .why-us-content {
+        @include flex-center(row, center, center);
+        gap: 60px;
+
+        .why-us-block {
+            @include flex-center(column, center, center);
+            gap: 28px;
+
+            .why-us-description {
+                @include flex-center(column, center, center);
+                gap: 15px;
+
+                p:first-child {
+                    @include font-style (500, 25px, $font-size-large, $color-primary);
+                    text-align: center;
+                }
+
+                p:last-child {
+                    @include font-style (400, 28px, $font-size-small, $color-primary);
+                    width: 321px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.review-section {
+    @include flex-center(column, space-between, center);
+    gap: 30px;
+
+    .review-title {
+        @include flex-center(row, space-between, center);
+        width: 100%;
+
+        .review-section-title {
+            @include font-style (500, 52px, $font-size-xlarge, $color-primary);
+        }
+
+        .review-rates {
+            @include flex-center(row, space-between, center);
+            gap: 25px;
+
+            .rating {
+                @include flex-center(column, space-between, flex-start);
+
+                p:first-child {
+                    @include font-style (500, 52px, 26px, $color-primary);
+                }
+
+                p:last-child {
+                    @include font-style (400, 32px, $font-size-small, $color-primary);
+                }
+            }
+        }
+    }
+
+    .people-review {
+        @include flex-center(row, space-between, flex-start);
+        gap: 40px;
+        flex-wrap: wrap;
+
+        .review-block {
+            @include flex-center(column, flex-start, center);
+            background-color: $color-white;
+            border-radius: 16px;
+            padding: 40px;
+            gap: 20px; 
+        }
+
+        .review-description {
+            @include font-style (400, 32px, $font-size-medium, $color-primary);
+            width: 365px;
+        }
+
+        .people-review-top-block {
+            @include flex-center(row, flex-start, center);
+
+            .name-position {
+                @include flex-center(column, space-between, flex-start);
+                padding: 0 35px 0 20px;
+                gap: 10px;
+
+                p:first-child {
+                    @include font-style (500, 22px, $font-size-large, $color-primary);
+                }
+
+                p:last-child {
+                    @include font-style (400, 22px, $font-size-small, $color-primary);
+                }
+            }
+        }
+
+    }
+}
+
+.become-agent-section {
+    @include flex-center(row, space-between, center);
+    gap: 360px;
+
+    .become-agent-left-block {
+        @include flex-center(column, space-between, flex-start);
+        gap: 40px;
+
+        .become-agent-content {
+            @include flex-center(column, space-between, flex-start);
+            width: 440px;
+            gap: 20px;
+
+            .become-agent-title {
+                @include font-style (500, 52px, $font-size-xlarge, $color-primary);
+            }
+        
+            .become-agent-description {
+                @include font-style (400, 30px, $font-size-medium, $color-primary);
+            }
+        }
+    }
+
+    .become-agent-right-block {
+        position: relative;
+        width: 538px;
+        height: 508px;
+
+        .become-agent-pic1 {
+            background-image: url(../img/estate-block-pic1.png);
+            background-size: cover;
+            border-radius: 18px;
+            width: 328px;
+            height: 398px;
+            top: 0;
+            right: 0;
+            position: absolute;
+        }
+
+        .become-agent-pic2 {
+            background-image: url(../img/estate-block-pic.png);
+            background-size: cover;
+            border-radius: 18px;
+            width: 278px;
+            height: 348px;
+            left: 0;
+            bottom: 0;
+            position: absolute;
+        }
+    }
+
+
+}
+
+.sponsors-section {
+    @include flex-center(column, space-between, space-between);
+    gap: 40px;
+
+    .sponsors-title {
+        @include font-style (400, 32px, $font-size-medium, $color-primary);
+        text-align: center;
+    }
+
+    .sponsors {
+        @include flex-center(row, space-between, center);
+        padding: 10px 20px;
+        gap: 120px;
+        flex-wrap: wrap;
+    }
 }

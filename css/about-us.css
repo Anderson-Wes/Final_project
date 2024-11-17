@@ -1,1 +1,412 @@
-/*# sourceMappingURL=about-us.css.map */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.why-us-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.why-us-section .why-us-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.why-us-section .why-us-title h2 {
+  font-family: "Roboto";
+  font-weight: 500;
+  line-height: 52px;
+  font-size: 40px;
+  color: #1A1A1A;
+  letter-spacing: normal;
+}
+.why-us-section .why-us-title p {
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 32px;
+  font-size: 16px;
+  color: #1A1A1A;
+  letter-spacing: normal;
+}
+.why-us-section .why-us-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+.why-us-section .why-us-content .why-us-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+}
+.why-us-section .why-us-content .why-us-block .why-us-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.why-us-section .why-us-content .why-us-block .why-us-description p:first-child {
+  font-family: "Roboto";
+  font-weight: 500;
+  line-height: 25px;
+  font-size: 20px;
+  color: #1A1A1A;
+  letter-spacing: normal;
+  text-align: center;
+}
+.why-us-section .why-us-content .why-us-block .why-us-description p:last-child {
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 28px;
+  font-size: 15px;
+  color: #1A1A1A;
+  letter-spacing: normal;
+  width: 321px;
+  text-align: center;
+}
+
+.review-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.review-section .review-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.review-section .review-title .review-section-title {
+  font-family: "Roboto";
+  font-weight: 500;
+  line-height: 52px;
+  font-size: 40px;
+  color: #1A1A1A;
+  letter-spacing: normal;
+}
+.review-section .review-title .review-rates {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+.review-section .review-title .review-rates .rating {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.review-section .review-title .review-rates .rating p:first-child {
+  font-family: "Roboto";
+  font-weight: 500;
+  line-height: 52px;
+  font-size: 26px;
+  color: #1A1A1A;
+  letter-spacing: normal;
+}
+.review-section .review-title .review-rates .rating p:last-child {
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 32px;
+  font-size: 15px;
+  color: #1A1A1A;
+  letter-spacing: normal;
+}
+.review-section .people-review {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.review-section .people-review .review-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+  gap: 20px;
+}
+.review-section .people-review .review-description {
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 32px;
+  font-size: 16px;
+  color: #1A1A1A;
+  letter-spacing: normal;
+  width: 365px;
+}
+.review-section .people-review .people-review-top-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.review-section .people-review .people-review-top-block .name-position {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 35px 0 20px;
+  gap: 10px;
+}
+.review-section .people-review .people-review-top-block .name-position p:first-child {
+  font-family: "Roboto";
+  font-weight: 500;
+  line-height: 22px;
+  font-size: 20px;
+  color: #1A1A1A;
+  letter-spacing: normal;
+}
+.review-section .people-review .people-review-top-block .name-position p:last-child {
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 22px;
+  font-size: 15px;
+  color: #1A1A1A;
+  letter-spacing: normal;
+}
+
+.become-agent-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 360px;
+}
+.become-agent-section .become-agent-left-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+.become-agent-section .become-agent-left-block .become-agent-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 440px;
+  gap: 20px;
+}
+.become-agent-section .become-agent-left-block .become-agent-content .become-agent-title {
+  font-family: "Roboto";
+  font-weight: 500;
+  line-height: 52px;
+  font-size: 40px;
+  color: #1A1A1A;
+  letter-spacing: normal;
+}
+.become-agent-section .become-agent-left-block .become-agent-content .become-agent-description {
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 30px;
+  font-size: 16px;
+  color: #1A1A1A;
+  letter-spacing: normal;
+}
+.become-agent-section .become-agent-right-block {
+  position: relative;
+  width: 538px;
+  height: 508px;
+}
+.become-agent-section .become-agent-right-block .become-agent-pic1 {
+  background-image: url(../img/estate-block-pic1.png);
+  background-size: cover;
+  border-radius: 18px;
+  width: 328px;
+  height: 398px;
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+.become-agent-section .become-agent-right-block .become-agent-pic2 {
+  background-image: url(../img/estate-block-pic.png);
+  background-size: cover;
+  border-radius: 18px;
+  width: 278px;
+  height: 348px;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.sponsors-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  gap: 40px;
+}
+.sponsors-section .sponsors-title {
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 32px;
+  font-size: 16px;
+  color: #1A1A1A;
+  letter-spacing: normal;
+  text-align: center;
+}
+.sponsors-section .sponsors {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 120px;
+  flex-wrap: wrap;
+}/*# sourceMappingURL=about-us.css.map */

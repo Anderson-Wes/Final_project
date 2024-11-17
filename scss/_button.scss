@@ -1,0 +1,28 @@
+.learn-more-button {
+    @include flex-center(row, center, center);
+    @include button-style(
+        $color-accent,
+        $color-primary,
+        18px,
+        none,
+        $font-size-small
+    );
+    gap: 20px;
+    width: 210px;
+    height: 64px;
+}
+
+.address-button {
+    @include button-style(
+        $color-white,
+        $color-primary,
+        80px,
+        $border-solid,
+        $font-size-medium,
+        $color-primary,
+        $color-white
+    );
+    padding: 2px 30px;
+    text-align: center;
+    display: inline-block;
+}

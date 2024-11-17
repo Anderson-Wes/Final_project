@@ -180,7 +180,14 @@ a {
   align-items: center;
   gap: 15px;
 }
-.listings-main-image .listings-text-box .yellow-paragraph p {
+.listings-main-image .listings-text-box .yellow-paragraph a {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+.listings-main-image .listings-text-box .yellow-paragraph a p {
   font-family: "Roboto";
   font-weight: 400;
   line-height: 21px;
@@ -227,30 +234,6 @@ a {
   align-items: space-between;
   gap: 40px;
   flex-wrap: wrap;
-}
-.cities-section .cities-widgets .cities-widget {
-  background-image: url("/img/new-york.png");
-  width: 256px;
-  height: 318px;
-  background-size: cover;
-  position: relative;
-  padding: 40px;
-}
-.cities-section .cities-widgets .cities-widget p:first-child {
-  font-family: "Roboto";
-  font-weight: 400;
-  line-height: 22px;
-  font-size: 20px;
-  color: #ffffff;
-  letter-spacing: normal;
-}
-.cities-section .cities-widgets .cities-widget p:last-child {
-  font-family: "Roboto";
-  font-weight: 300;
-  line-height: 22px;
-  font-size: 15px;
-  color: #ffffff;
-  letter-spacing: normal;
 }
 
 .slider-navigation {

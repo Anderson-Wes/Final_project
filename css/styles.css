@@ -640,6 +640,234 @@ a {
   text-align: center;
 }
 
+.learn-more-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #E7C873;
+  color: #1A1A1A;
+  font-weight: 500;
+  cursor: pointer;
+  line-height: 54px;
+  border: none;
+  border-radius: 18px;
+  font-size: 15px;
+  transition: background-color 0.4s;
+  gap: 20px;
+  width: 210px;
+  height: 64px;
+}
+.learn-more-button:hover {
+  background-color: #ffffff;
+  color: #1A1A1A;
+}
+
+.address-button {
+  background-color: #ffffff;
+  color: #1A1A1A;
+  font-weight: 500;
+  cursor: pointer;
+  line-height: 54px;
+  border: 1px solid #1A1A1A;
+  border-radius: 80px;
+  font-size: 16px;
+  transition: background-color 0.4s;
+  padding: 2px 30px;
+  text-align: center;
+  display: inline-block;
+}
+.address-button:hover {
+  background-color: #1A1A1A;
+  color: #ffffff;
+}
+
+.widget {
+  position: relative;
+  background-color: #ffffff;
+  width: 520px;
+  height: 520px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.widget .image-background {
+  background-image: url(/img/widget1-1.png);
+  background-size: cover;
+  width: 520px;
+  height: 420px;
+  border-radius: 12px 12px 0 0;
+}
+.widget .widget-description {
+  background-color: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  gap: 10px;
+  position: absolute;
+  width: 470px;
+  height: 140px;
+  padding: 25px;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.widget .widget-description .widget-title {
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 22px;
+  font-size: 20px;
+  color: #1A1A1A;
+  letter-spacing: normal;
+  margin-bottom: 20px;
+}
+.widget .widget-description .location,
+.widget .widget-description .bedrooms,
+.widget .widget-description .bathrooms,
+.widget .widget-description .square {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.widget .widget-description .location p {
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 30px;
+  font-size: 16px;
+  color: #1A1A1A;
+  letter-spacing: normal;
+}
+.widget .widget-description .description-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.widget .widget-description .description-row .specification {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: space-between;
+  gap: 30px;
+}
+.widget .widget-description .description-row .specification p {
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 18px;
+  font-size: 16px;
+  color: #1A1A1A;
+  letter-spacing: normal;
+}
+.widget .widget-description .description-row .price p {
+  font-family: "Roboto";
+  font-weight: 600;
+  line-height: 30px;
+  font-size: 20px;
+  color: #EB664E;
+  letter-spacing: normal;
+}
+
+.news-widget {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #E9E9E9;
+  width: 328px;
+  border-radius: 18px;
+  padding-bottom: 30px;
+  cursor: pointer;
+}
+.news-widget .news-widget-image {
+  background-image: url(/img/news-widget1-1.png);
+  width: 100%;
+  height: 218px;
+  border-radius: 18px;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+.news-widget .news-widget-date {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 28px;
+  font-size: 15px;
+  color: #3D3E3F;
+  letter-spacing: normal;
+  margin-bottom: 10px;
+  gap: 8px;
+}
+.news-widget .news-widget-date .news-widget-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #1A1A1A;
+}
+.news-widget .news-widget-description p {
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 26px;
+  font-size: 16px;
+  color: #1A1A1A;
+  letter-spacing: normal;
+  text-align: center;
+  width: 240px;
+  margin-bottom: 15px;
+}
+.news-widget .widget-btn {
+  background-color: #E7C873;
+  color: #1A1A1A;
+  font-weight: 500;
+  cursor: pointer;
+  line-height: 54px;
+  border: none;
+  border-radius: 18px;
+  font-size: 15px;
+  transition: background-color 0.4s;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 2px 50px;
+}
+.news-widget .widget-btn:hover {
+  background-color: #ffffff;
+  color: #1A1A1A;
+}
+
+.cities-widget {
+  background-image: url("/img/new-york.png");
+  width: 256px;
+  height: 318px;
+  background-size: cover;
+  position: relative;
+  padding: 40px;
+  cursor: pointer;
+}
+.cities-widget p:first-child {
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 22px;
+  font-size: 20px;
+  color: #ffffff;
+  letter-spacing: normal;
+}
+.cities-widget p:last-child {
+  font-family: "Roboto";
+  font-weight: 300;
+  line-height: 22px;
+  font-size: 15px;
+  color: #ffffff;
+  letter-spacing: normal;
+}
+
 body {
   background-color: #eeeeee;
 }
@@ -854,92 +1082,6 @@ body main .row-widgets {
   align-items: center;
   gap: 40px;
 }
-body main .row-widgets .widget {
-  position: relative;
-  background-color: #ffffff;
-  width: 520px;
-  height: 520px;
-  border-radius: 12px;
-}
-body main .row-widgets .widget .image-background {
-  background-image: url(/img/widget1-1.png);
-  background-size: cover;
-  width: 520px;
-  height: 420px;
-  border-radius: 12px 12px 0 0;
-}
-body main .row-widgets .widget .widget-description {
-  background-color: #ffffff;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: space-between;
-  gap: 10px;
-  position: absolute;
-  width: 470px;
-  height: 140px;
-  padding: 25px;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-body main .row-widgets .widget .widget-description .widget-title {
-  font-family: "Roboto";
-  font-weight: 400;
-  line-height: 22px;
-  font-size: 20px;
-  color: #1A1A1A;
-  letter-spacing: normal;
-  margin-bottom: 20px;
-}
-body main .row-widgets .widget .widget-description .location,
-body main .row-widgets .widget .widget-description .bedrooms,
-body main .row-widgets .widget .widget-description .bathrooms,
-body main .row-widgets .widget .widget-description .square {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 10px;
-}
-body main .row-widgets .widget .widget-description .location p {
-  font-family: "Roboto";
-  font-weight: 400;
-  line-height: 30px;
-  font-size: 16px;
-  color: #1A1A1A;
-  letter-spacing: normal;
-}
-body main .row-widgets .widget .widget-description .description-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-body main .row-widgets .widget .widget-description .description-row .specification {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: space-between;
-  gap: 30px;
-}
-body main .row-widgets .widget .widget-description .description-row .specification p {
-  font-family: "Roboto";
-  font-weight: 400;
-  line-height: 18px;
-  font-size: 16px;
-  color: #1A1A1A;
-  letter-spacing: normal;
-}
-body main .row-widgets .widget .widget-description .description-row .price p {
-  font-family: "Roboto";
-  font-weight: 600;
-  line-height: 30px;
-  font-size: 20px;
-  color: #EB664E;
-  letter-spacing: normal;
-}
 body main .stats-section {
   display: flex;
   flex-direction: column;
@@ -977,7 +1119,7 @@ body main .stats-section .stats-content .stats-background-image .clients-stats {
   align-items: center;
 }
 body main .stats-section .stats-content .stats-background-image .clients-stats .community-icon {
-  background-color: #FAF4E3;
+  background-color: #faf4e3;
   width: 60px;
   height: 60px;
   border-radius: 50px;
@@ -1016,28 +1158,6 @@ body main .stats-section .stats-content .column-description h2 {
   color: #ffffff;
   letter-spacing: normal;
   text-align: start;
-}
-body main .stats-section .stats-content .column-description .learn-more-button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background-color: #E7C873;
-  color: #1A1A1A;
-  font-weight: 500;
-  cursor: pointer;
-  line-height: 54px;
-  border: none;
-  border-radius: 18px;
-  font-size: 15px;
-  transition: background-color 0.4s;
-  gap: 20px;
-  width: 210px;
-  height: 64px;
-}
-body main .stats-section .stats-content .column-description .learn-more-button:hover {
-  background-color: #ffffff;
-  color: #1A1A1A;
 }
 body main .stats-section .stats-row {
   display: flex;
@@ -1122,7 +1242,7 @@ body main .steps-section .steps-left-block .steps-clients-stats {
   align-items: center;
 }
 body main .steps-section .steps-left-block .steps-clients-stats .community-icon {
-  background-color: #FAF4E3;
+  background-color: #faf4e3;
   width: 60px;
   height: 60px;
   border-radius: 50px;
@@ -1214,76 +1334,6 @@ body main .news-section .news-content .news-widgets-row {
   align-items: center;
   gap: 30px;
 }
-body main .news-section .news-content .news-widgets-row .news-widget {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #E9E9E9;
-  width: 328px;
-  border-radius: 18px;
-  padding-bottom: 30px;
-}
-body main .news-section .news-content .news-widgets-row .news-widget .news-widget-image {
-  background-image: url(/img/news-widget1-1.png);
-  width: 100%;
-  height: 218px;
-  border-radius: 18px;
-  background-size: cover;
-  margin-bottom: 20px;
-}
-body main .news-section .news-content .news-widgets-row .news-widget .news-widget-date {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  font-family: "Roboto";
-  font-weight: 400;
-  line-height: 28px;
-  font-size: 15px;
-  color: #3D3E3F;
-  letter-spacing: normal;
-  margin-bottom: 10px;
-  gap: 8px;
-}
-body main .news-section .news-content .news-widgets-row .news-widget .news-widget-date .news-widget-dot {
-  width: 4px;
-  height: 4px;
-  border-radius: 4px;
-  background-color: #1A1A1A;
-}
-body main .news-section .news-content .news-widgets-row .news-widget .news-widget-description p {
-  font-family: "Roboto";
-  font-weight: 400;
-  line-height: 26px;
-  font-size: 16px;
-  color: #1A1A1A;
-  letter-spacing: normal;
-  text-align: center;
-  width: 240px;
-  margin-bottom: 15px;
-}
-body main .news-section .news-content .news-widgets-row .news-widget .widget-btn {
-  background-color: #E7C873;
-  color: #1A1A1A;
-  font-weight: 500;
-  cursor: pointer;
-  line-height: 54px;
-  border: none;
-  border-radius: 18px;
-  font-size: 15px;
-  transition: background-color 0.4s;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding: 2px 50px;
-}
-body main .news-section .news-content .news-widgets-row .news-widget .widget-btn:hover {
-  background-color: #ffffff;
-  color: #1A1A1A;
-}
 body main .markets-section {
   max-width: 1420px;
 }
@@ -1314,24 +1364,6 @@ body main .markets-section .markets-address {
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
-}
-body main .markets-section .markets-address .address-button {
-  background-color: #ffffff;
-  color: #1A1A1A;
-  font-weight: 500;
-  cursor: pointer;
-  line-height: 54px;
-  border: 1px solid #1A1A1A;
-  border-radius: 80px;
-  font-size: 16px;
-  transition: background-color 0.4s;
-  padding: 2px 30px;
-  text-align: center;
-  display: inline-block;
-}
-body main .markets-section .markets-address .address-button:hover {
-  background-color: #1A1A1A;
-  color: #ffffff;
 }
 body .total-clients p:first-child {
   font-family: "Roboto";
