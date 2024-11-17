@@ -322,8 +322,8 @@ a {
   padding: 40px;
   width: 680px;
   height: 700px;
-  background-color: #E9E9E9;
-  background-image: url();
+  background-size: cover;
+  background-image: url("/img/left-widget-image.png");
 }
 .properties-section .properties-content .properties-widgets .properties-left-widget .sale-featured {
   display: flex;
@@ -422,4 +422,111 @@ a {
   font-size: 16px;
   color: #ffffff;
   letter-spacing: normal;
+}
+.properties-section .properties-content .properties-widgets .properties-right-widgets {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 685px;
+  height: 700px;
+}
+.properties-section .properties-content .properties-widgets .properties-right-widgets .right-top-widget {
+  background-image: url("/img/top-right-widget.png");
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 335px;
+  padding: 10px;
+}
+.properties-section .properties-content .properties-widgets .properties-right-widgets .right-top-widget .widget-slider {
+  background-color: rgba(26, 26, 26, 0.1098039216);
+  padding: 15px 30px;
+  border-radius: 50px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.properties-section .properties-content .properties-widgets .properties-right-widgets .right-bottom-widget {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: space-between;
+  width: 100%;
+}
+.properties-section .properties-content .properties-widgets .properties-right-widgets .right-bottom-widget .bottom-left-widget {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/img/right-bottom-widget.png");
+  background-size: cover;
+  border-radius: 16px;
+  width: 326px;
+  height: 331px;
+}
+.properties-section .properties-content .properties-widgets .properties-right-widgets .right-bottom-widget .bottom-left-widget .play-button {
+  background-color: rgba(26, 26, 26, 0.1098039216);
+  padding: 24px 25px;
+  border-radius: 100%;
+}
+.properties-section .properties-content .properties-widgets .properties-right-widgets .right-bottom-widget .bottom-right-yellow {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  background-color: #E7C873;
+  border-radius: 16px;
+  padding: 35px 40px;
+  width: 326px;
+  height: 331px;
+}
+.properties-section .properties-content .properties-widgets .properties-right-widgets .right-bottom-widget .bottom-right-yellow .bottom-right-yellow-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+}
+.properties-section .properties-content .properties-widgets .properties-right-widgets .right-bottom-widget .bottom-right-yellow .bottom-right-yellow-description .number-properties {
+  font-family: "Roboto";
+  font-weight: 600;
+  line-height: 52px;
+  font-size: 40px;
+  color: #1A1A1A;
+  letter-spacing: normal;
+}
+.properties-section .properties-content .properties-widgets .properties-right-widgets .right-bottom-widget .bottom-right-yellow .bottom-right-yellow-description .properties-description {
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 28px;
+  font-size: 15px;
+  color: #1A1A1A;
+  letter-spacing: normal;
+}
+.properties-section .properties-content .properties-widgets .properties-right-widgets .right-bottom-widget .bottom-right-yellow .bottom-right-yellow-description p {
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 34px;
+  font-size: 20px;
+  color: #1A1A1A;
+  letter-spacing: normal;
+  width: 247px;
+}
+.properties-section .properties-content .properties-widgets .properties-right-widgets .right-bottom-widget .bottom-right-yellow .arrow-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.properties-section .properties-content .properties-widgets .properties-right-widgets .right-bottom-widget .bottom-right-yellow .arrow-button .arrow-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
 }/*# sourceMappingURL=listings.css.map */
