@@ -6,6 +6,14 @@
   align-items: $align;
 }
 
+// Mixins
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 // Button style
 @mixin button-style($bg-color: $color-accent, $text-color: $color-primary, $br-radius: 80px, $border: none, $font-size: $font-size-medium, $hover-bg-color: $color-white, $hover-text-color: $color-primary) {
   background-color: $bg-color;

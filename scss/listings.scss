@@ -96,7 +96,7 @@
 .properties-section {
     background-color: $color-background-section;
     width: 100%;
-    padding: 170px 260px;
+    
     @include flex-center(column, center, center);
 
     .properties-content {

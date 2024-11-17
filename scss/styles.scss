@@ -2,6 +2,7 @@
 @import 'variables';
 @import 'placeholder';
 @import 'mixins';
+@import 'popup';
 @import 'footer';
 
 body {
@@ -14,7 +15,7 @@ body {
     height: 860px;
     background-size: cover;
     position: relative;
-    margin-bottom: 140px;
+
 
     .header {
       @include flex-center(row, space-between, center);
@@ -62,7 +63,7 @@ body {
       }
 
       .nav-right-block {
-        display: flex;
+        @include flex-center(row, center, center);
         gap: 20px;
 
         .phone {
@@ -78,7 +79,7 @@ body {
           @include button-style($color-white, $color-primary, 80px, $border-solid, $font-size-medium, $color-primary, $color-white);
           padding: 2px 30px;
           text-align: center;
-          display: inline-block;
+          display: flex;
         }
       }
     }
@@ -137,7 +138,7 @@ body {
     @include flex-center(column);
 
     section {
-      padding-bottom: 100px
+      padding: 100px 0;
     }
 
     .column-widgets {
