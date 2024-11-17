@@ -13,27 +13,101 @@
             type="../image/favicon-icon.svg"
         />
         <link rel="stylesheet" href="../css/styles.css" />
-        <link rel="stylesheet" href="../css/listings.css" />
 
-        
-        <title>Listings</title>
+        <title>Pop</title>
     </head>
     <body>
-        <div>
-            <div class="some-text">
-                <a class="button" href="#popup"><img src="../img/profile_icon.svg" alt="profile_icon" /><a />
-              </div>
-            
-              <div class="popup" id="popup">
-                <div class="popup__content">
-                    <h2 class="heading-secondary">Start booking now</h2>
-                    <h3 class="heading-tertiary">Important &ndash; Please read these terms before booking</h3>
-                    <p class="popup__text">
-                      Godard health goth green juice +1, helvetica taxidermy synth. Brooklyn wayfarers hoodie twee, keffiyeh XOXO microdosing fashion axe iPhone bespoke vape. Affogato brooklyn offal meditation raclette aesthetic heirloom post-ironic iPhone venmo leggings.
-                    </p>
-                    <a href="#" class="close-button">Close Popup</a>
+        <div class="popup-section">
+            <div class="container">
+                <div class="title">
+                    <p>Registration</p>
+                    <a href="../index.html"
+                        ><img src="../img/close-icon.svg" alt="close-icon"
+                    /></a>
                 </div>
-              </div>
+                <form action="#">
+                    <div class="user_details">
+                        <div class="input_box">
+                            <label for="name">Full Name</label>
+                            <input
+                                type="text"
+                                id="name"
+                                placeholder="Enter your name"
+                                required
+                            />
+                        </div>
+                        <div class="input_box">
+                            <label for="username">Username</label>
+                            <input
+                                type="text"
+                                id="username"
+                                placeholder="Enter your username"
+                                required
+                            />
+                        </div>
+                        <div class="input_box">
+                            <label for="email">Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Enter your email"
+                                required
+                            />
+                        </div>
+                        <div class="input_box">
+                            <label for="phone">Phone Number</label>
+                            <input
+                                type="number"
+                                id="phone"
+                                placeholder="Enter your number"
+                                required
+                            />
+                        </div>
+                        <div class="input_box">
+                            <label for="pass">Password</label>
+                            <input
+                                type="password"
+                                id="pass"
+                                placeholder="Enter your password"
+                                required
+                            />
+                        </div>
+                        <div class="input_box">
+                            <label for="confirmPass">Confirm Password</label>
+                            <input
+                                type="password"
+                                id="confirmPass"
+                                placeholder="Confirm your password"
+                                required
+                            />
+                        </div>
+                    </div>
+                    <div class="gender">
+                        <span class="gender_title">Gender</span>
+                        <input type="radio" name="gender" id="radio_1" />
+                        <input type="radio" name="gender" id="radio_2" />
+                        <input type="radio" name="gender" id="radio_3" />
+
+                        <div class="category">
+                            <label for="radio_1">
+                                <span class="dot one"></span>
+                                <span>Male</span>
+                            </label>
+                            <label for="radio_2">
+                                <span class="dot two"></span>
+                                <span>Female</span>
+                            </label>
+                            <label for="radio_3">
+                                <span class="dot three"></span>
+                                <span>Prefer not to say</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="reg_btn">
+                        <input type="submit" value="Register" />
+                    </div>
+                </form>
+            </div>
         </div>
-      
     </body>
+</html>

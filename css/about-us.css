@@ -141,6 +141,29 @@ a {
   box-sizing: border-box;
 }
 
+.heading-about-main {
+  font-family: "Roboto";
+  font-weight: 500;
+  line-height: 60px;
+  font-size: 60px;
+  color: #1a1a1a;
+  letter-spacing: 7px;
+  display: block;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.heading-about-sub {
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 21px;
+  font-size: 15px;
+  color: #1a1a1a;
+  letter-spacing: 7px;
+  display: block;
+  text-align: center;
+}
+
 .why-us-section {
   display: flex;
   flex-direction: column;
@@ -160,7 +183,7 @@ a {
   font-weight: 500;
   line-height: 52px;
   font-size: 40px;
-  color: #1A1A1A;
+  color: #1a1a1a;
   letter-spacing: normal;
 }
 .why-us-section .why-us-title p {
@@ -168,7 +191,7 @@ a {
   font-weight: 400;
   line-height: 32px;
   font-size: 16px;
-  color: #1A1A1A;
+  color: #1a1a1a;
   letter-spacing: normal;
 }
 .why-us-section .why-us-content {
@@ -197,7 +220,7 @@ a {
   font-weight: 500;
   line-height: 25px;
   font-size: 20px;
-  color: #1A1A1A;
+  color: #1a1a1a;
   letter-spacing: normal;
   text-align: center;
 }
@@ -206,7 +229,7 @@ a {
   font-weight: 400;
   line-height: 28px;
   font-size: 15px;
-  color: #1A1A1A;
+  color: #1a1a1a;
   letter-spacing: normal;
   width: 321px;
   text-align: center;
@@ -231,7 +254,7 @@ a {
   font-weight: 500;
   line-height: 52px;
   font-size: 40px;
-  color: #1A1A1A;
+  color: #1a1a1a;
   letter-spacing: normal;
 }
 .review-section .review-title .review-rates {
@@ -252,7 +275,7 @@ a {
   font-weight: 500;
   line-height: 52px;
   font-size: 26px;
-  color: #1A1A1A;
+  color: #1a1a1a;
   letter-spacing: normal;
 }
 .review-section .review-title .review-rates .rating p:last-child {
@@ -260,64 +283,7 @@ a {
   font-weight: 400;
   line-height: 32px;
   font-size: 15px;
-  color: #1A1A1A;
-  letter-spacing: normal;
-}
-.review-section .people-review {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-.review-section .people-review .review-block {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: #ffffff;
-  border-radius: 16px;
-  padding: 40px;
-  gap: 20px;
-}
-.review-section .people-review .review-description {
-  font-family: "Roboto";
-  font-weight: 400;
-  line-height: 32px;
-  font-size: 16px;
-  color: #1A1A1A;
-  letter-spacing: normal;
-  width: 365px;
-}
-.review-section .people-review .people-review-top-block {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-}
-.review-section .people-review .people-review-top-block .name-position {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 0 35px 0 20px;
-  gap: 10px;
-}
-.review-section .people-review .people-review-top-block .name-position p:first-child {
-  font-family: "Roboto";
-  font-weight: 500;
-  line-height: 22px;
-  font-size: 20px;
-  color: #1A1A1A;
-  letter-spacing: normal;
-}
-.review-section .people-review .people-review-top-block .name-position p:last-child {
-  font-family: "Roboto";
-  font-weight: 400;
-  line-height: 22px;
-  font-size: 15px;
-  color: #1A1A1A;
+  color: #1a1a1a;
   letter-spacing: normal;
 }
 
@@ -348,7 +314,7 @@ a {
   font-weight: 500;
   line-height: 52px;
   font-size: 40px;
-  color: #1A1A1A;
+  color: #1a1a1a;
   letter-spacing: normal;
 }
 .become-agent-section .become-agent-left-block .become-agent-content .become-agent-description {
@@ -356,7 +322,7 @@ a {
   font-weight: 400;
   line-height: 30px;
   font-size: 16px;
-  color: #1A1A1A;
+  color: #1a1a1a;
   letter-spacing: normal;
 }
 .become-agent-section .become-agent-right-block {
@@ -397,7 +363,7 @@ a {
   font-weight: 400;
   line-height: 32px;
   font-size: 16px;
-  color: #1A1A1A;
+  color: #1a1a1a;
   letter-spacing: normal;
   text-align: center;
 }

@@ -1,6 +1,19 @@
-@import 'reset';
-@import 'variables';
-@import 'mixins';
+@import "reset";
+@import "variables";
+@import "mixins";
+
+.heading-about-main {
+    @include font-style(500, 60px, $font-size-xxlarge, $color-primary, 7px);
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.heading-about-sub {
+    @include font-style(400, 21px, $font-size-small, $color-primary, 7px);
+    display: block;
+    text-align: center;
+}
 
 .why-us-section {
     @include flex-center(column, center, center);
@@ -11,11 +24,11 @@
         gap: 5px;
 
         h2 {
-            @include font-style (500, 52px, $font-size-xlarge, $color-primary);
+            @include font-style(500, 52px, $font-size-xlarge, $color-primary);
         }
 
         p {
-            @include font-style (400, 32px, $font-size-medium, $color-primary);
+            @include font-style(400, 32px, $font-size-medium, $color-primary);
         }
     }
 
@@ -32,12 +45,22 @@
                 gap: 15px;
 
                 p:first-child {
-                    @include font-style (500, 25px, $font-size-large, $color-primary);
+                    @include font-style(
+                        500,
+                        25px,
+                        $font-size-large,
+                        $color-primary
+                    );
                     text-align: center;
                 }
 
                 p:last-child {
-                    @include font-style (400, 28px, $font-size-small, $color-primary);
+                    @include font-style(
+                        400,
+                        28px,
+                        $font-size-small,
+                        $color-primary
+                    );
                     width: 321px;
                     text-align: center;
                 }
@@ -55,7 +78,7 @@
         width: 100%;
 
         .review-section-title {
-            @include font-style (500, 52px, $font-size-xlarge, $color-primary);
+            @include font-style(500, 52px, $font-size-xlarge, $color-primary);
         }
 
         .review-rates {
@@ -66,52 +89,19 @@
                 @include flex-center(column, space-between, flex-start);
 
                 p:first-child {
-                    @include font-style (500, 52px, 26px, $color-primary);
+                    @include font-style(500, 52px, 26px, $color-primary);
                 }
 
                 p:last-child {
-                    @include font-style (400, 32px, $font-size-small, $color-primary);
+                    @include font-style(
+                        400,
+                        32px,
+                        $font-size-small,
+                        $color-primary
+                    );
                 }
             }
         }
-    }
-
-    .people-review {
-        @include flex-center(row, space-between, flex-start);
-        gap: 40px;
-        flex-wrap: wrap;
-
-        .review-block {
-            @include flex-center(column, flex-start, center);
-            background-color: $color-white;
-            border-radius: 16px;
-            padding: 40px;
-            gap: 20px; 
-        }
-
-        .review-description {
-            @include font-style (400, 32px, $font-size-medium, $color-primary);
-            width: 365px;
-        }
-
-        .people-review-top-block {
-            @include flex-center(row, flex-start, center);
-
-            .name-position {
-                @include flex-center(column, space-between, flex-start);
-                padding: 0 35px 0 20px;
-                gap: 10px;
-
-                p:first-child {
-                    @include font-style (500, 22px, $font-size-large, $color-primary);
-                }
-
-                p:last-child {
-                    @include font-style (400, 22px, $font-size-small, $color-primary);
-                }
-            }
-        }
-
     }
 }
 
@@ -129,11 +119,21 @@
             gap: 20px;
 
             .become-agent-title {
-                @include font-style (500, 52px, $font-size-xlarge, $color-primary);
+                @include font-style(
+                    500,
+                    52px,
+                    $font-size-xlarge,
+                    $color-primary
+                );
             }
-        
+
             .become-agent-description {
-                @include font-style (400, 30px, $font-size-medium, $color-primary);
+                @include font-style(
+                    400,
+                    30px,
+                    $font-size-medium,
+                    $color-primary
+                );
             }
         }
     }
@@ -165,8 +165,6 @@
             position: absolute;
         }
     }
-
-
 }
 
 .sponsors-section {
@@ -174,7 +172,7 @@
     gap: 40px;
 
     .sponsors-title {
-        @include font-style (400, 32px, $font-size-medium, $color-primary);
+        @include font-style(400, 32px, $font-size-medium, $color-primary);
         text-align: center;
     }
 

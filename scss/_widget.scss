@@ -70,7 +70,7 @@
     }
 }
 
-// news-section section
+// news-section
 
 .news-widget {
     @include flex-center(column, center, center);
@@ -141,5 +141,54 @@
 
     p:last-child {
         @include font-style(300, 22px, $font-size-small, $color-white);
+    }
+}
+
+// Quotes
+
+.people-review {
+    @include flex-center(row, space-between, flex-start);
+    gap: 40px;
+    flex-wrap: wrap;
+
+    .review-block {
+        @include flex-center(column, flex-start, center);
+        background-color: $color-white;
+        border-radius: 16px;
+        padding: 40px;
+        gap: 20px;
+    }
+
+    .review-description {
+        @include font-style(400, 32px, $font-size-medium, $color-primary);
+        width: 365px;
+    }
+
+    .people-review-top-block {
+        @include flex-center(row, flex-start, center);
+
+        .name-position {
+            @include flex-center(column, space-between, flex-start);
+            padding: 0 35px 0 20px;
+            gap: 10px;
+
+            p:first-child {
+                @include font-style(
+                    500,
+                    22px,
+                    $font-size-large,
+                    $color-primary
+                );
+            }
+
+            p:last-child {
+                @include font-style(
+                    400,
+                    22px,
+                    $font-size-small,
+                    $color-primary
+                );
+            }
+        }
     }
 }
