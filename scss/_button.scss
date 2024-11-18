@@ -10,6 +10,10 @@
     gap: 20px;
     width: 210px;
     height: 64px;
+
+    @media (max-width: 1100px) {
+        @include flex-center(row, center, center);
+    }
 }
 
 .address-button {
@@ -63,7 +67,7 @@
     }
 }
 
-// popup button
+// profile button
 .reg_btn {
     padding: 25px;
     margin: 15px 0;

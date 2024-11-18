@@ -9,11 +9,20 @@
     .footer-main {
         @include flex-center(column, center, space-between);
         gap: 50px;
-        max-width: 1700px;
+        max-width: 1440px;
         margin: 0 auto;
+
+        @media (max-width: 1100px) {
+            @include flex-center(column, center, center);
+        }
 
         .footer-top-block {
             @include flex-center(row, space-between, center);
+
+            @media (max-width: 1100px) {
+                @include flex-center(column, center, center);
+                gap: 30px;
+            }
 
             .footer-social-network {
                 @include flex-center();
@@ -37,8 +46,25 @@
             @include flex-center(row, space-between, flex-start);
             gap: 50px;
 
+
+            @media (max-width: 1460px) {
+                @include flex-center(row, space-evenly, flex-start);
+                flex-wrap: wrap;
+
+            }
+
+            @media (max-width: 1100px) {
+                @include flex-center(column, center, center);
+                flex-wrap: wrap; 
+            }
+
             .footer-navigation {
                 width: 170px;
+
+                @media (max-width: 1100px) {
+                    @include flex-center(column, center, center);
+                }
+
 
                 ul,
                 a {
@@ -50,6 +76,10 @@
                         $color-white
                     );
                     gap: 10px;
+
+                    @media (max-width: 1100px) {
+                        @include flex-center(column, center, center);
+                    }
                 }
             }
 
@@ -61,44 +91,57 @@
                     $color-footer-nav
                 );
                 margin-bottom: 30px;
+                width: 112px;
+
+                @media (max-width: 1100px) {
+                    @include flex-center(column, center, center);
+                }
             }
 
-            .app {
-                @include flex-center(column);
-                gap: 20px;
+            .footer-navigation-app {
+                @media (max-width: 1100px) {
+                    @include flex-center(column, center, center);
+                }
 
-                .get-app {
-                    background-color: $color-line;
-                    width: 220px;
-                    border-radius: 12px;
-
-                    .get-app-content {
-                        @include flex-center(row, space-evenly, center);
-                        padding: 20px 25px;
-                        gap: 15px;
-
-                        .vertical-line {
-                            background-color: $color-white;
-                            width: 1px;
-                            height: 38px;
-                        }
-
-                        p:first-child {
-                            @include font-style(400, 16px, 12px, $color-white);
-                            margin-bottom: 4px;
-                        }
-
-                        p:last-child {
-                            @include font-style(
-                                500,
-                                20px,
-                                $font-size-small,
-                                $color-white
-                            );
+                .app {
+                    @include flex-center(column);
+                    gap: 20px;
+    
+                    .get-app {
+                        background-color: $color-line;
+                        width: 220px;
+                        border-radius: 12px;
+    
+                        .get-app-content {
+                            @include flex-center(row, space-evenly, center);
+                            padding: 20px 25px;
+                            gap: 15px;
+    
+                            .vertical-line {
+                                background-color: $color-white;
+                                width: 1px;
+                                height: 38px;
+                            }
+    
+                            p:first-child {
+                                @include font-style(400, 16px, 12px, $color-white);
+                                margin-bottom: 4px;
+                            }
+    
+                            p:last-child {
+                                @include font-style(
+                                    500,
+                                    20px,
+                                    $font-size-small,
+                                    $color-white
+                                );
+                            }
                         }
                     }
                 }
             }
+
+            
 
             .subscribe-content {
                 @include flex-center(column, center, space-between);

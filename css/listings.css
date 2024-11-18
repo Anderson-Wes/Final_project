@@ -148,13 +148,12 @@ a {
 .listings-main-image .listings-text-box {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   gap: 20px;
-  position: absolute;
-  top: 50%;
-  left: 25%;
-  transform: translate(-50%, -50%);
+  max-width: 1440px;
+  padding: 200px 0;
+  margin: 0 auto;
 }
 .listings-main-image .listings-text-box h1 {
   font-family: "Roboto";
@@ -230,7 +229,7 @@ a {
 .cities-section .cities-widgets {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: space-between;
   gap: 40px;
   flex-wrap: wrap;
@@ -243,6 +242,16 @@ a {
   align-items: flex-start;
   width: 100%;
   gap: 20px;
+  cursor: pointer;
+}
+@media (max-width: 1390px) {
+  .slider-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+  }
 }
 .slider-navigation .arrow-icon {
   background-color: #ffffff;

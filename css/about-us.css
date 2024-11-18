@@ -200,6 +200,7 @@ a {
   justify-content: center;
   align-items: center;
   gap: 60px;
+  flex-wrap: wrap;
 }
 .why-us-section .why-us-content .why-us-block {
   display: flex;
@@ -242,12 +243,29 @@ a {
   align-items: center;
   gap: 30px;
 }
+@media (max-width: 1100px) {
+  .review-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .review-section .review-title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+@media (max-width: 1440px) {
+  .review-section .review-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
 }
 .review-section .review-title .review-section-title {
   font-family: "Roboto";
@@ -292,7 +310,17 @@ a {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 360px;
+  gap: 200px;
+  flex-wrap: wrap;
+}
+@media (max-width: 1440px) {
+  .become-agent-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+  }
 }
 .become-agent-section .become-agent-left-block {
   display: flex;
@@ -300,6 +328,15 @@ a {
   justify-content: space-between;
   align-items: flex-start;
   gap: 40px;
+}
+@media (max-width: 1440px) {
+  .become-agent-section .become-agent-left-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
 .become-agent-section .become-agent-left-block .become-agent-content {
   display: flex;
@@ -370,9 +407,17 @@ a {
 .sponsors-section .sponsors {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 10px 20px;
   gap: 120px;
   flex-wrap: wrap;
+}
+@media (max-width: 1440px) {
+  .sponsors-section .sponsors {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 }/*# sourceMappingURL=about-us.css.map */

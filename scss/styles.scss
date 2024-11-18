@@ -9,6 +9,11 @@
 body {
     background-color: $color-background;
 
+    .header, .stats-content, .column-widgets {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
     .main-image {
         background-image: url("/img/main-img.png");
         padding: 42px 40px;
@@ -22,14 +27,31 @@ body {
             padding: 20px 40px;
             background-color: $color-white;
             border-radius: 80px;
+            
+
+            @media (max-width: 1280px) {
+                height: 100px;
+            }
+
 
             .navbar {
                 @include flex-center(row, center, center);
+                
+                @media (max-width: 1280px) {
+                    display: none;
+                }
             }
 
             .nav-right-block {
                 @include flex-center(row, center, center);
                 gap: 20px;
+                
+                @media (max-width: 1280px) {
+                    padding: 40px;
+                    width: 700px;
+                    @include flex-center(row, flex-end, center);
+                }
+                
 
                 .phone {
                     @include flex-center(row, center, center);
@@ -60,19 +82,42 @@ body {
                     text-align: center;
                     display: flex;
                 }
+
+                @media (max-width: 830px) {
+                    display: none;
+                }
+            }
+
+            .burger {
+                display: none;
+
+                @media (max-width: 1280px) {
+                    display: flex;
+                }
+                
             }
         }
 
         .text-box {
+            @include flex-center(column, center, center);
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            width: 100%;
 
             .heading-primary {
                 color: $color-secondary;
                 text-transform: uppercase;
                 padding: 60px 0;
+                
+
+                @media (max-width: 900px) {
+                    width: 430px;
+                    top: 50%;
+                    left: 50%;
+                }
+                
 
                 .heading-primary-main {
                     @include font-style(
@@ -97,13 +142,22 @@ body {
                     );
                     display: block;
                     text-align: center;
+                    
                 }
             }
 
             .search {
-                width: 100%;
+                width: 800px;
                 position: relative;
                 display: flex;
+                justify-content: space-between;
+
+
+                @media (max-width: 900px) {
+                    width: 400px;
+                }
+
+                
 
                 .searchTerm {
                     width: 100%;
@@ -133,19 +187,35 @@ body {
 
         section {
             padding: 100px 0;
+            
         }
 
         .column-widgets {
             @include flex-center(column, center, center);
             gap: 40px;
+            width: 100%;
 
             .categories-header {
                 @include flex-center(row, space-between, center);
-                width: 1640px;
+                width: 100%;
+                
+                @media (max-width: 1390px) {
+                    @include flex-center(row, center, center);
+                }
+
+                .news-widget-btn {
+                    @media (max-width: 1390px) {
+                        display: none;
+                    }
+                }
 
                 .categories-title {
                     @include flex-center(column, center, flex-start);
                     gap: 5px;
+
+                    @media (max-width: 1390px) {
+                        @include flex-center(column, center, center);
+                    }
                 }
             }
             h2 {
@@ -169,8 +239,16 @@ body {
         }
 
         .row-widgets {
-            @include flex-center(row, center, center);
+            @include flex-center(row, space-between, center);
             gap: 40px;
+            width: 100%;
+            flex-wrap: wrap;
+
+
+            @media (max-width: 1400px) {
+                @include flex-center(row, space-evenly, center);
+                
+            }
         }
 
         .stats-section {
@@ -178,12 +256,24 @@ body {
             background-color: $color-secondary;
             width: 100%;
             height: 1170px;
-            padding: 175px 260px;
             gap: 70px;
+
+            @media (max-width: 1410px) {
+                @include flex-center(column, space-between, center);
+                flex-wrap: wrap;
+                height: 100%;
+            }
 
             .stats-content {
                 @include flex-center(row, center, center);
+                flex-wrap: wrap;
                 gap: 165px;
+
+                @media (max-width: 1280px) {
+                    flex-wrap: wrap;
+                    @include flex-center(column, center, center);
+                    gap: 50px;
+                }
 
                 .stats-background-image {
                     position: relative;
@@ -218,6 +308,10 @@ body {
                     @include flex-center(column, center, flex-start);
                     gap: 20px;
 
+                    @media (max-width: 1280px) {
+                        @include flex-center(column, center, center);
+                    }
+
                     p {
                         @include font-style(
                             300,
@@ -243,9 +337,15 @@ body {
             .stats-row {
                 @include flex-center(row, center, center);
                 gap: 180px;
+                flex-wrap: wrap;
+
+                @media (max-width: 1280px) {
+                    gap: 100px;
+                }
 
                 .stats-count {
                     @include flex-center(column, center, center);
+                    width: 206px;
 
                     p:first-child {
                         @include font-style(
@@ -263,6 +363,7 @@ body {
                             $font-size-medium,
                             $color-white
                         );
+                        text-align: center
                     }
                 }
             }
@@ -271,6 +372,12 @@ body {
         .steps-section {
             @include flex-center(row, center, center);
             gap: 200px;
+            flex-wrap: wrap;
+
+            @media (max-width: 1280px) {
+                @include flex-center(column-reverse, center, center);
+                gap: 100px;
+            }
 
             .steps-left-block {
                 @include flex-center(column, space-between, space-between);
@@ -280,14 +387,26 @@ body {
                 width: 840px;
                 border-radius: 18px;
 
+                @media (max-width: 1100px) {
+                    @include flex-center(column, space-between, center);
+                }
+
                 .top-image {
                     background-image: url(/img/top-image.png);
                     width: 573px;
                     height: 280px;
+
+                    @media (max-width: 1100px) {
+                        @include flex-center(row, center, center);
+                    }
                 }
 
                 .lower-image {
                     @include flex-center(row, space-between, flex-start);
+
+                    @media (max-width: 1100px) {
+                        @include flex-center(row, center, center);
+                    }
                 }
 
                 .lower-image div:first-child {
@@ -295,12 +414,19 @@ body {
                     width: 334px;
                     height: 359px;
                     border-radius: 18px;
+
+                    @media (max-width: 1100px) {
+                        display: none;
+                    }
                 }
 
                 .lower-image div:last-child {
                     background-image: url(/img/lower-image.png);
                     width: 488px;
                     height: 540px;
+
+
+
                 }
 
                 .steps-clients-stats {
@@ -312,6 +438,10 @@ body {
                     height: 100px;
                     border-radius: 12px;
                     @include flex-center(row, space-evenly, center);
+
+                    @media (max-width: 1100px) {
+                        right: 35%;
+                    }
 
                     .community-icon {
                         background-color: #faf4e3;
@@ -373,8 +503,9 @@ body {
 
         .news-section {
             .news-content {
-                @include flex-center(column, center, center);
+                @include flex-center(column, space, center);
                 gap: 40px;
+                
 
                 .news-title h2 {
                     @include font-style(
@@ -396,8 +527,10 @@ body {
                 }
 
                 .news-widgets-row {
-                    @include flex-center(row, center);
-                    gap: 30px;
+                    @include flex-center(row, center, center);
+                    max-width: 1440px;
+                    gap: 20px; 
+                    flex-wrap: wrap;
                 }
             }
         }
@@ -457,6 +590,16 @@ body {
         .iframe-footer {
             width: 100%;
             height: 709px;
+
+            @media (max-width: 1476px) {
+                height: 991px;
+                width: 100%;
+            }
+
+            @media (max-width: 1100px) {
+                height: 1880px;
+                width: 100%;
+            }
         }
     }
 }
