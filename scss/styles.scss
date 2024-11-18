@@ -9,7 +9,9 @@
 body {
     background-color: $color-background;
 
-    .header, .stats-content, .column-widgets {
+    .header,
+    .stats-content,
+    .column-widgets {
         max-width: 1440px;
         margin: 0 auto;
     }
@@ -27,16 +29,14 @@ body {
             padding: 20px 40px;
             background-color: $color-white;
             border-radius: 80px;
-            
 
             @media (max-width: 1280px) {
                 height: 100px;
             }
 
-
             .navbar {
                 @include flex-center(row, center, center);
-                
+
                 @media (max-width: 1280px) {
                     display: none;
                 }
@@ -45,13 +45,12 @@ body {
             .nav-right-block {
                 @include flex-center(row, center, center);
                 gap: 20px;
-                
+
                 @media (max-width: 1280px) {
                     padding: 40px;
                     width: 700px;
                     @include flex-center(row, flex-end, center);
                 }
-                
 
                 .phone {
                     @include flex-center(row, center, center);
@@ -94,7 +93,6 @@ body {
                 @media (max-width: 1280px) {
                     display: flex;
                 }
-                
             }
         }
 
@@ -110,14 +108,12 @@ body {
                 color: $color-secondary;
                 text-transform: uppercase;
                 padding: 60px 0;
-                
 
                 @media (max-width: 900px) {
                     width: 430px;
                     top: 50%;
                     left: 50%;
                 }
-                
 
                 .heading-primary-main {
                     @include font-style(
@@ -142,7 +138,6 @@ body {
                     );
                     display: block;
                     text-align: center;
-                    
                 }
             }
 
@@ -152,12 +147,9 @@ body {
                 display: flex;
                 justify-content: space-between;
 
-
                 @media (max-width: 900px) {
                     width: 400px;
                 }
-
-                
 
                 .searchTerm {
                     width: 100%;
@@ -187,7 +179,6 @@ body {
 
         section {
             padding: 100px 0;
-            
         }
 
         .column-widgets {
@@ -198,7 +189,7 @@ body {
             .categories-header {
                 @include flex-center(row, space-between, center);
                 width: 100%;
-                
+
                 @media (max-width: 1390px) {
                     @include flex-center(row, center, center);
                 }
@@ -244,10 +235,8 @@ body {
             width: 100%;
             flex-wrap: wrap;
 
-
             @media (max-width: 1400px) {
                 @include flex-center(row, space-evenly, center);
-                
             }
         }
 
@@ -363,7 +352,7 @@ body {
                             $font-size-medium,
                             $color-white
                         );
-                        text-align: center
+                        text-align: center;
                     }
                 }
             }
@@ -424,9 +413,6 @@ body {
                     background-image: url(/img/lower-image.png);
                     width: 488px;
                     height: 540px;
-
-
-
                 }
 
                 .steps-clients-stats {
@@ -505,7 +491,6 @@ body {
             .news-content {
                 @include flex-center(column, space, center);
                 gap: 40px;
-                
 
                 .news-title h2 {
                     @include font-style(
@@ -529,7 +514,7 @@ body {
                 .news-widgets-row {
                     @include flex-center(row, center, center);
                     max-width: 1440px;
-                    gap: 20px; 
+                    gap: 20px;
                     flex-wrap: wrap;
                 }
             }

@@ -127,9 +127,6 @@
 // cities-widget
 
 .cities-widgets {
-
-
-
     .cities-widget {
         background-image: url("/img/new-york.png");
         width: 256px;
@@ -138,20 +135,16 @@
         position: relative;
         padding: 40px;
         cursor: pointer;
-        
-    
+
         p:first-child {
             @include font-style(400, 22px, $font-size-large, $color-white);
         }
-    
+
         p:last-child {
             @include font-style(300, 22px, $font-size-small, $color-white);
         }
     }
-    
-
 }
-
 
 // Quotes
 

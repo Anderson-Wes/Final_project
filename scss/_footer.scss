@@ -46,16 +46,14 @@
             @include flex-center(row, space-between, flex-start);
             gap: 50px;
 
-
             @media (max-width: 1460px) {
                 @include flex-center(row, space-evenly, flex-start);
                 flex-wrap: wrap;
-
             }
 
             @media (max-width: 1100px) {
                 @include flex-center(column, center, center);
-                flex-wrap: wrap; 
+                flex-wrap: wrap;
             }
 
             .footer-navigation {
@@ -64,7 +62,6 @@
                 @media (max-width: 1100px) {
                     @include flex-center(column, center, center);
                 }
-
 
                 ul,
                 a {
@@ -106,28 +103,33 @@
                 .app {
                     @include flex-center(column);
                     gap: 20px;
-    
+
                     .get-app {
                         background-color: $color-line;
                         width: 220px;
                         border-radius: 12px;
-    
+
                         .get-app-content {
                             @include flex-center(row, space-evenly, center);
                             padding: 20px 25px;
                             gap: 15px;
-    
+
                             .vertical-line {
                                 background-color: $color-white;
                                 width: 1px;
                                 height: 38px;
                             }
-    
+
                             p:first-child {
-                                @include font-style(400, 16px, 12px, $color-white);
+                                @include font-style(
+                                    400,
+                                    16px,
+                                    12px,
+                                    $color-white
+                                );
                                 margin-bottom: 4px;
                             }
-    
+
                             p:last-child {
                                 @include font-style(
                                     500,
@@ -140,8 +142,6 @@
                     }
                 }
             }
-
-            
 
             .subscribe-content {
                 @include flex-center(column, center, space-between);

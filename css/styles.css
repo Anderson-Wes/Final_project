@@ -1200,7 +1200,9 @@ a {
 body {
   background-color: #eeeeee;
 }
-body .header, body .stats-content, body .column-widgets {
+body .header,
+body .stats-content,
+body .column-widgets {
   max-width: 1440px;
   margin: 0 auto;
 }
