@@ -1,70 +1,110 @@
-// Featured Properties section
+.row-widgets {
+    @include flex-center(row, space-between, center);
+    gap: 40px;
+    width: 100%;
+    flex-wrap: wrap;
 
-.widget {
-    position: relative;
-    background-color: $color-white;
-    width: 432px;
-    height: 520px;
-    border-radius: 12px;
-    cursor: pointer;
-
-    .image-background {
-        background-image: url(/img/widget1-1.png);
-        background-size: cover;
-        width: 100%;
-        height: 420px;
-        border-radius: 12px 12px 0 0;
+    @media (max-width: 1400px) {
+        @include flex-center(row, space-evenly, center);
     }
 
-    .widget-description {
+    &:hover .widget {
+        filter: blur(3px);
+        opacity: 0.5;
+        transform: scale(0.98);
+        box-shadow: none;
+    }
+    &:hover .widget:hover {
+        transform: scale(1);
+        filter: blur(0px);
+        opacity: 1;
+        box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
+    }
+
+    .widget {
+        position: relative;
         background-color: $color-white;
+        width: 432px;
+        height: 520px;
         border-radius: 12px;
-        @include flex-center(column, space-between, space-between);
-        gap: 10px;
-        position: absolute;
-        width: 100%;
-        height: 140px;
-        padding: 25px;
-        top: 80%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
 
-        .widget-title {
-            @include font-style(400, 22px, $font-size-large, $color-primary);
-            margin-bottom: 20px;
+        transition: 0.2s all;
+
+        .image-background {
+            background-image: url(/img/widget1-1.png);
+            background-size: cover;
+            width: 100%;
+            height: 420px;
+            border-radius: 12px 12px 0 0;
         }
 
-        .location,
-        .bedrooms,
-        .bathrooms,
-        .square {
-            @include flex-center(row, flex-start, center);
+        .widget-description {
+            background-color: $color-white;
+            border-radius: 12px;
+            @include flex-center(column, space-between, space-between);
             gap: 10px;
-        }
+            position: absolute;
+            width: 100%;
+            height: 140px;
+            padding: 25px;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
 
-        .location p {
-            @include font-style(400, 30px, $font-size-medium, $color-primary);
-        }
-
-        .description-row {
-            @include flex-center(row, space-between);
-
-            .specification {
-                @include flex-center(row, flex-end, space-between);
-                gap: 30px;
-
-                p {
-                    @include font-style(
-                        400,
-                        18px,
-                        $font-size-medium,
-                        $color-primary
-                    );
-                }
+            .widget-title {
+                @include font-style(
+                    400,
+                    22px,
+                    $font-size-large,
+                    $color-primary
+                );
+                margin-bottom: 20px;
             }
 
-            .price p {
-                @include font-style(600, 30px, $font-size-large, $color-price);
+            .location,
+            .bedrooms,
+            .bathrooms,
+            .square {
+                @include flex-center(row, flex-start, center);
+                gap: 10px;
+            }
+
+            .location p {
+                @include font-style(
+                    400,
+                    30px,
+                    $font-size-medium,
+                    $color-primary
+                );
+            }
+
+            .description-row {
+                @include flex-center(row, space-between);
+
+                .specification {
+                    @include flex-center(row, flex-end, space-between);
+                    gap: 30px;
+
+                    p {
+                        @include font-style(
+                            400,
+                            18px,
+                            $font-size-medium,
+                            $color-primary
+                        );
+                    }
+                }
+
+                .price p {
+                    @include font-style(
+                        600,
+                        30px,
+                        $font-size-large,
+                        $color-price
+                    );
+                }
             }
         }
     }
@@ -72,61 +112,87 @@
 
 // news-section
 
-.news-widget {
-    @include flex-center(column, center, center);
-    background-color: $color-light-grey;
-    width: 328px;
-    border-radius: 18px;
-    padding-bottom: 30px;
-    cursor: pointer;
+.news-widgets-row {
+    @include flex-center(row, center, center);
+    max-width: 1440px;
+    gap: 20px;
+    flex-wrap: wrap;
 
-    .news-widget-image {
-        background-image: url(/img/news-widget1-1.png);
-        width: 100%;
-        height: 218px;
+    &:hover .news-widget {
+        filter: blur(3px);
+        opacity: 0.5;
+        transform: scale(0.98);
+        box-shadow: none;
+    }
+    &:hover .news-widget:hover {
+        transform: scale(1);
+        filter: blur(0px);
+        opacity: 1;
+        box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
+    }
+
+    .news-widget {
+        @include flex-center(column, center, center);
+        background-color: $color-light-grey;
+        width: 328px;
         border-radius: 18px;
-        background-size: cover;
-        margin-bottom: 20px;
-    }
+        padding-bottom: 30px;
+        cursor: pointer;
+        box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.25);
+        transition: 0.2s all;
 
-    .news-widget-date {
-        @include flex-center(row, center, center);
-        @include font-style(400, 28px, $font-size-small, $color-grey);
-        margin-bottom: 10px;
-        gap: 8px;
-
-        .news-widget-dot {
-            width: 4px;
-            height: 4px;
-            border-radius: 4px;
-            background-color: $color-primary;
+        .news-widget-image {
+            background-image: url(/img/news-widget1-1.png);
+            width: 100%;
+            height: 218px;
+            border-radius: 18px;
+            background-size: cover;
+            margin-bottom: 20px;
         }
-    }
 
-    .news-widget-description p {
-        @include font-style(400, 26px, $font-size-medium, $color-primary);
-        text-align: center;
-        width: 240px;
-        margin-bottom: 15px;
-    }
+        .news-widget-date {
+            @include flex-center(row, center, center);
+            @include font-style(400, 28px, $font-size-small, $color-grey);
+            margin-bottom: 10px;
+            gap: 8px;
 
-    .widget-btn {
-        @include button-style(
-            $color-accent,
-            $color-primary,
-            18px,
-            none,
-            $font-size-small
-        );
-        @include flex-center(row, center, center);
-        gap: 20px;
-        padding: 2px 50px;
+            .news-widget-dot {
+                width: 4px;
+                height: 4px;
+                border-radius: 4px;
+                background-color: $color-primary;
+            }
+        }
+
+        .news-widget-description p {
+            @include font-style(400, 26px, $font-size-medium, $color-primary);
+            text-align: center;
+            width: 240px;
+            margin-bottom: 15px;
+        }
+
+        .widget-btn {
+            @include button-style(
+                $color-accent,
+                $color-primary,
+                18px,
+                none,
+                $font-size-small
+            );
+            @include flex-center(row, center, center);
+            gap: 20px;
+            padding: 2px 50px;
+        }
     }
 }
 
 // cities-widget
 
 .cities-widgets {
+    @include flex-center(row, center, space-between);
+    gap: 40px;
+    flex-wrap: wrap;
+
     .cities-widget {
         background-image: url("/img/new-york.png");
         width: 256px;
@@ -135,6 +201,8 @@
         position: relative;
         padding: 40px;
         cursor: pointer;
+        transition: 0.2s all;
+        box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.25);
 
         p:first-child {
             @include font-style(400, 22px, $font-size-large, $color-white);
@@ -143,6 +211,18 @@
         p:last-child {
             @include font-style(300, 22px, $font-size-small, $color-white);
         }
+    }
+    &:hover .cities-widget {
+        filter: blur(3px);
+        opacity: 0.5;
+        transform: scale(0.98);
+        box-shadow: none;
+    }
+    &:hover .cities-widget:hover {
+        transform: scale(1);
+        filter: blur(0px);
+        opacity: 1;
+        box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
     }
 }
 
@@ -157,12 +237,27 @@
         @include flex-center(row, center, center);
     }
 
+    &:hover .review-block {
+        filter: blur(3px);
+        opacity: 0.5;
+        transform: scale(0.98);
+        box-shadow: none;
+    }
+    &:hover .review-block:hover {
+        transform: scale(1);
+        filter: blur(0px);
+        opacity: 1;
+        box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
+    }
+
     .review-block {
         @include flex-center(column, flex-start, center);
         background-color: $color-white;
         border-radius: 16px;
         padding: 40px;
         gap: 20px;
+        box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.25);
+        transition: 0.2s all;
     }
 
     .review-description {

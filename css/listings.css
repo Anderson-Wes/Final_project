@@ -142,8 +142,10 @@ a {
 }
 
 .listings-main-image {
-  background-image: url("/img/listing-main-bg.png") !important;
-  height: 965px !important;
+  background-image: url("/img/listing-main-bg.png");
+  height: 960px;
+  width: 100%;
+  background-size: cover;
 }
 .listings-main-image .listings-text-box {
   display: flex;
@@ -155,6 +157,12 @@ a {
   padding: 200px 0;
   margin: 0 auto;
 }
+@media (max-width: 1100px) {
+  .listings-main-image .listings-text-box {
+    width: 100%;
+    align-items: center;
+  }
+}
 .listings-main-image .listings-text-box h1 {
   font-family: "Roboto";
   font-weight: 500;
@@ -163,6 +171,12 @@ a {
   color: #ffffff;
   letter-spacing: normal;
   width: 600px;
+}
+@media (max-width: 1100px) {
+  .listings-main-image .listings-text-box h1 {
+    width: 100%;
+    text-align: center;
+  }
 }
 .listings-main-image .listings-text-box p {
   font-family: "Roboto";
@@ -226,13 +240,41 @@ a {
   letter-spacing: normal;
   text-align: center;
 }
-.cities-section .cities-widgets {
+
+.categories-header {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+@media (max-width: 1390px) {
+  .categories-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 1390px) {
+  .categories-header .news-widget-btn {
+    display: none;
+  }
+}
+.categories-header .categories-title {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: space-between;
-  gap: 40px;
-  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 5px;
+}
+@media (max-width: 1390px) {
+  .categories-header .categories-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .slider-navigation {
@@ -268,6 +310,7 @@ a {
 .properties-section {
   background-color: #2d3a4f;
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -279,6 +322,11 @@ a {
   justify-content: center;
   align-items: center;
   gap: 40px;
+}
+@media (max-width: 670px) {
+  .properties-section .properties-content {
+    width: 100%;
+  }
 }
 .properties-section .properties-content .properties-title h2 {
   font-family: "Roboto";
@@ -302,8 +350,9 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: space-between;
   gap: 32px;
+  flex-wrap: wrap;
 }
 .properties-section .properties-content .properties-widgets .properties-left-widget {
   display: flex;
@@ -315,6 +364,14 @@ a {
   height: 700px;
   background-size: cover;
   background-image: url("/img/left-widget-image.png");
+  border-radius: 18px;
+}
+@media (max-width: 1000px) {
+  .properties-section .properties-content .properties-widgets .properties-left-widget {
+    transform: scale(0.6);
+    height: 500px;
+    border-radius: 16px;
+  }
 }
 .properties-section .properties-content .properties-widgets .properties-left-widget .sale-featured {
   display: flex;
@@ -418,9 +475,8 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: space-between;
   width: 685px;
-  height: 700px;
 }
 .properties-section .properties-content .properties-widgets .properties-right-widgets .right-top-widget {
   background-image: url("/img/top-right-widget.png");
@@ -430,7 +486,12 @@ a {
   align-items: center;
   width: 100%;
   height: 335px;
-  padding: 10px;
+  border-radius: 18px;
+}
+@media (max-width: 1000px) {
+  .properties-section .properties-content .properties-widgets .properties-right-widgets .right-top-widget {
+    display: none;
+  }
 }
 .properties-section .properties-content .properties-widgets .properties-right-widgets .right-top-widget .widget-slider {
   background-color: rgba(26, 26, 26, 0.1098039216);
@@ -445,6 +506,16 @@ a {
   justify-content: space-between;
   align-items: space-between;
   width: 100%;
+  gap: 20px;
+}
+@media (max-width: 1000px) {
+  .properties-section .properties-content .properties-widgets .properties-right-widgets .right-bottom-widget {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
 }
 .properties-section .properties-content .properties-widgets .properties-right-widgets .right-bottom-widget .bottom-left-widget {
   display: flex;

@@ -3,8 +3,10 @@
 @import "mixins";
 
 .listings-main-image {
-    background-image: url("/img/listing-main-bg.png") !important;
-    height: 965px !important;
+    background-image: url("/img/listing-main-bg.png");
+    height: 960px;
+    width: 100%;
+    background-size: cover;
 
     .listings-text-box {
         @include flex-center(column, center, flex-start);
@@ -13,9 +15,19 @@
         padding: 200px 0;
         margin: 0 auto;
 
+        @media (max-width: 1100px) {
+            width: 100%;
+            align-items: center;
+        }
+
         h1 {
             @include font-style(500, 78px, $font-size-xxlarge, $color-white);
             width: 600px;
+
+            @media (max-width: 1100px) {
+                width: 100%;
+                text-align: center;
+            }
         }
 
         p {
@@ -60,11 +72,29 @@
             text-align: center;
         }
     }
+}
 
-    .cities-widgets {
-        @include flex-center(row, center, space-between);
-        gap: 40px;
-        flex-wrap: wrap;
+.categories-header {
+    @include flex-center(row, space-between, center);
+    width: 100%;
+
+    @media (max-width: 1390px) {
+        @include flex-center(row, center, center);
+    }
+
+    .news-widget-btn {
+        @media (max-width: 1390px) {
+            display: none;
+        }
+    }
+
+    .categories-title {
+        @include flex-center(column, center, flex-start);
+        gap: 5px;
+
+        @media (max-width: 1390px) {
+            @include flex-center(column, center, center);
+        }
     }
 }
 
@@ -92,12 +122,16 @@
 .properties-section {
     background-color: $color-background-section;
     width: 100%;
-
+    height: 100%;
     @include flex-center(column, center, center);
 
     .properties-content {
         @include flex-center(column, center, center);
         gap: 40px;
+
+        @media (max-width: 670px) {
+            width: 100%;
+        }
 
         .properties-title h2 {
             @include font-style(500, 52px, $font-size-xlarge, $color-white);
@@ -110,8 +144,9 @@
         }
 
         .properties-widgets {
-            @include flex-center(row, center, center);
+            @include flex-center(row, center, space-between);
             gap: 32px;
+            flex-wrap: wrap;
 
             .properties-left-widget {
                 @include flex-center(column, space-between, flex-start);
@@ -120,6 +155,13 @@
                 height: 700px;
                 background-size: cover;
                 background-image: url("/img/left-widget-image.png");
+                border-radius: 18px;
+
+                @media (max-width: 1000px) {
+                    transform: scale(0.6);
+                    height: 500px;
+                    border-radius: 16px;
+                }
 
                 .sale-featured {
                     @include flex-center(row, flex-start, center);
@@ -215,16 +257,19 @@
             }
 
             .properties-right-widgets {
-                @include flex-center(column, space-between, center);
+                @include flex-center(column, space-between, space-between);
                 width: 685px;
-                height: 700px;
 
                 .right-top-widget {
                     background-image: url("/img/top-right-widget.png");
                     @include flex-center(row, space-between, center);
                     width: 100%;
                     height: 335px;
-                    padding: 10px;
+                    border-radius: 18px;
+
+                    @media (max-width: 1000px) {
+                        display: none;
+                    }
 
                     .widget-slider {
                         background-color: $color-button-bg;
@@ -237,6 +282,12 @@
                 .right-bottom-widget {
                     @include flex-center(row, space-between, space-between);
                     width: 100%;
+                    gap: 20px;
+
+                    @media (max-width: 1000px) {
+                        @include flex-center(column, center, center);
+                        height: 100%;
+                    }
 
                     .bottom-left-widget {
                         @include flex-center(row, center, center);

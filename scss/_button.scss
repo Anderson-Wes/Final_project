@@ -31,8 +31,6 @@
     display: inline-block;
 }
 
-// header navigation
-
 .dropdown a {
     @include font-style(400, 30px, $font-size-medium, $color-primary);
 }
@@ -46,7 +44,9 @@
     @include font-style(700, 60px, $font-size-medium, $color-white);
     background-color: $color-white;
     padding: 0 25px;
+    height: 30px;
     border: none;
+    @include flex-center(column, center, center);
 }
 
 .dropdown-content {
