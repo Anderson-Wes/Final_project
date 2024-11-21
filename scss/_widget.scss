@@ -33,7 +33,7 @@
         transition: 0.2s all;
 
         .image-background {
-            background-image: url(/img/widget1-1.png);
+            background-image: url("../img/widget1-1.png");
             background-size: cover;
             width: 100%;
             height: 420px;
@@ -142,7 +142,7 @@
         transition: 0.2s all;
 
         .news-widget-image {
-            background-image: url(/img/news-widget1-1.png);
+            background-image: url("../img/news-widget1-1.png");
             width: 100%;
             height: 218px;
             border-radius: 18px;
@@ -194,7 +194,7 @@
     flex-wrap: wrap;
 
     .cities-widget {
-        background-image: url("/img/new-york.png");
+        background-image: url("../img/new-york.png");
         width: 256px;
         height: 318px;
         background-size: cover;

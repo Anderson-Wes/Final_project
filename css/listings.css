@@ -142,7 +142,7 @@ a {
 }
 
 .listings-main-image {
-  background-image: url("/img/listing-main-bg.png");
+  background-image: url("../img/listing-main-bg.png");
   height: 960px;
   width: 100%;
   background-size: cover;
@@ -363,7 +363,7 @@ a {
   width: 680px;
   height: 700px;
   background-size: cover;
-  background-image: url("/img/left-widget-image.png");
+  background-image: url("../img/left-widget-image.png");
   border-radius: 18px;
 }
 @media (max-width: 1000px) {
@@ -479,7 +479,7 @@ a {
   width: 685px;
 }
 .properties-section .properties-content .properties-widgets .properties-right-widgets .right-top-widget {
-  background-image: url("/img/top-right-widget.png");
+  background-image: url("../img/top-right-widget.png");
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -522,7 +522,7 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-image: url("/img/right-bottom-widget.png");
+  background-image: url("../img/right-bottom-widget.png");
   background-size: cover;
   border-radius: 16px;
   width: 326px;

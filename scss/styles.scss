@@ -106,7 +106,7 @@ body {
         @include flex-center(column);
 
         .main-image {
-            background-image: url("/img/main-img.png");
+            background-image: url("../img/main-img.png");
             padding: 42px 40px;
             height: 860px;
             width: 100%;
@@ -245,7 +245,7 @@ body {
 
                 .stats-background-image {
                     position: relative;
-                    background-image: url(/img/stats.png);
+                    background-image: url("../img/stats.png");
                     height: 638px;
                     width: 638px;
                     background-size: cover;
@@ -379,7 +379,7 @@ body {
                 }
 
                 .top-image {
-                    background-image: url(/img/top-image.png);
+                    background-image: url("../img/top-image.png");
                     width: 573px;
                     height: 280px;
 
@@ -397,7 +397,7 @@ body {
                 }
 
                 .lower-image div:first-child {
-                    background-image: url(/img/mid-image.png);
+                    background-image: url("../img/mid-image.png");
                     width: 334px;
                     height: 359px;
                     border-radius: 18px;
@@ -408,7 +408,7 @@ body {
                 }
 
                 .lower-image div:last-child {
-                    background-image: url(/img/lower-image.png);
+                    background-image: url("../img/lower-image.png");
                     width: 488px;
                     height: 540px;
                 }

@@ -3,7 +3,7 @@
 @import "mixins";
 
 .listings-main-image {
-    background-image: url("/img/listing-main-bg.png");
+    background-image: url("../img/listing-main-bg.png");
     height: 960px;
     width: 100%;
     background-size: cover;
@@ -154,7 +154,7 @@
                 width: 680px;
                 height: 700px;
                 background-size: cover;
-                background-image: url("/img/left-widget-image.png");
+                background-image: url("../img/left-widget-image.png");
                 border-radius: 18px;
 
                 @media (max-width: 1000px) {
@@ -261,7 +261,7 @@
                 width: 685px;
 
                 .right-top-widget {
-                    background-image: url("/img/top-right-widget.png");
+                    background-image: url("../img/top-right-widget.png");
                     @include flex-center(row, space-between, center);
                     width: 100%;
                     height: 335px;
@@ -291,7 +291,7 @@
 
                     .bottom-left-widget {
                         @include flex-center(row, center, center);
-                        background-image: url("/img/right-bottom-widget.png");
+                        background-image: url("../img/right-bottom-widget.png");
                         background-size: cover;
                         border-radius: 16px;
                         width: 326px;

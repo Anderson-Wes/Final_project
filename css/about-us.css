@@ -368,7 +368,7 @@ a {
   height: 508px;
 }
 .become-agent-section .become-agent-right-block .become-agent-pic1 {
-  background-image: url(../img/estate-block-pic1.png);
+  background-image: url("../img/estate-block-pic1.png");
   background-size: cover;
   border-radius: 18px;
   width: 328px;
@@ -378,7 +378,7 @@ a {
   position: absolute;
 }
 .become-agent-section .become-agent-right-block .become-agent-pic2 {
-  background-image: url(../img/estate-block-pic.png);
+  background-image: url("../img/estate-block-pic.png");
   background-size: cover;
   border-radius: 18px;
   width: 278px;
